@@ -1,0 +1,73 @@
+import salud from '../assets/img/salud.svg';
+import tanque from '../assets/img/secciones/tanque.svg';
+import delegacion from '../assets/img/secciones/delegacion.svg';
+import escuela from '../assets/img/secciones/escuela.svg';
+import emergencias from '../assets/img/secciones/emergencias.svg';
+
+export const servicios = [
+  {
+    id: 'casa-salud',
+    title: 'Casa de Salud',
+    summary: 'Consultas generales, curaciones y el módulo de vacunación de los viernes.',
+    icon: 'i-cruz',
+    image: salud,
+    alt: 'Ilustración de una casa de salud rural',
+    horario: 'Lun a vie, 8:00 a 15:00',
+    lugar: 'Centro, a un lado de la plaza',
+    phone: '481 000 0000',
+    email: 'ejemplo@salud.chapulhuacanito.ejemplo',
+    link: { label: 'Ver la jornada médica', to: '/eventos/jornada-medica' },
+  },
+  {
+    id: 'comite-agua',
+    title: 'Comité de agua',
+    summary: 'Reportes de fugas, cortes y el padrón de tomas. Atienden en la caseta.',
+    icon: 'i-gota',
+    image: tanque,
+    alt: 'Ilustración de un tanque de agua elevado entre cerros',
+    horario: 'Lun a sáb, 9:00 a 13:00',
+    lugar: 'Caseta del tanque, camino al Sabinal',
+    phone: '481 000 0000',
+    email: 'ejemplo@agua.chapulhuacanito.ejemplo',
+    link: { label: 'Aviso de suspensión', to: '/avisos/suspension-agua' },
+  },
+  {
+    id: 'delegacion',
+    title: 'Delegación',
+    summary: 'Constancias de ejemplo, sellos y el libro donde se anotan las faenas.',
+    icon: 'i-portapapeles',
+    image: delegacion,
+    alt: 'Ilustración de la delegación con una bandera de ejemplo',
+    horario: 'Lun a vie, 9:00 a 15:00',
+    lugar: 'Plaza, Centro',
+    phone: '481 000 0000',
+    email: 'ejemplo@delegacion.chapulhuacanito.ejemplo',
+    link: { label: 'Asamblea de barrio', to: '/avisos/asamblea-centro' },
+  },
+  {
+    id: 'escuela',
+    title: 'Escuela primaria Río Claro',
+    summary: 'Turno matutino. Nombre inventado para el prototipo, no es un plantel real.',
+    icon: 'i-escuela',
+    image: escuela,
+    alt: 'Ilustración de una escuela con huerta y palma',
+    horario: 'Lun a vie, 8:00 a 13:30',
+    lugar: 'Entre el Centro y San José',
+    phone: '481 000 0000',
+    email: 'ejemplo@escuela.chapulhuacanito.ejemplo',
+    link: { label: 'Ruta escolar', to: '/transporte' },
+  },
+  {
+    id: 'emergencias',
+    title: 'Emergencias',
+    summary: 'En un caso real marca al 911. Aquí solo mostramos un contacto de ejemplo de la comunidad.',
+    icon: 'i-megafono',
+    image: emergencias,
+    alt: 'Ilustración de un módulo de emergencias con cruz y lámpara',
+    horario: 'Enlace vecinal de ejemplo, 24 h',
+    lugar: 'Red de barrio, no sustituye a protección civil',
+    phone: '481 000 0000',
+    email: 'ejemplo@emergencias.chapulhuacanito.ejemplo',
+    link: { label: 'Reportar un problema', to: '/reportar' },
+  },
+];
