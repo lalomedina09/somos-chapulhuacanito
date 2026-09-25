@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
+import BolsaDetallePage from './pages/BolsaDetallePage';
+import BolsaPage from './pages/BolsaPage';
 import { AvisoPage, default as AvisosPage } from './pages/AvisosPage';
 import ComunidadPage from './pages/ComunidadPage';
 import CulturaPage from './pages/CulturaPage';
@@ -38,6 +40,8 @@ export default function App() {
           <Route path="noticias/:id" element={<NoticiaPage />} />
           <Route path="mapa" element={<MapaPage />} />
           <Route path="reportar" element={<ReportarPage />} />
+          <Route path="bolsa-de-trabajo" element={<BolsaPage />} />
+          <Route path="bolsa-de-trabajo/:id" element={<BolsaDetallePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

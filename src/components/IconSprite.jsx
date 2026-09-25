@@ -108,6 +108,67 @@ export default function IconSprite() {
         <path fill="currentColor" stroke="none" d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
         <circle cx="12" cy="10" r="3.2" fill="#fff" stroke="none" />
       </symbol>
+      <symbol id="i-corazon" viewBox="0 0 24 24">
+        <path d="M19.5 12.57 12 20l-7.5-7.43a5 5 0 1 1 7.5-6.57 5 5 0 1 1 7.5 6.57" />
+      </symbol>
+      <symbol id="i-corazon-lleno" viewBox="0 0 24 24">
+        <path fill="currentColor" stroke="currentColor" d="M19.5 12.57 12 20l-7.5-7.43a5 5 0 1 1 7.5-6.57 5 5 0 1 1 7.5 6.57" />
+      </symbol>
+      <symbol id="i-estrella" viewBox="0 0 24 24">
+        <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.9L6.6 19.7l1-6L3.2 9.4l6.1-.9z" />
+      </symbol>
+      <symbol id="i-estrella-llena" viewBox="0 0 24 24">
+        <path fill="currentColor" stroke="currentColor" d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.9L6.6 19.7l1-6L3.2 9.4l6.1-.9z" />
+      </symbol>
+      <symbol id="i-musica" viewBox="0 0 24 24">
+        <path d="M9 18V6l12-2v12" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </symbol>
+      <symbol id="i-libro" viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+      </symbol>
+      <symbol id="i-plato" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="i-maletin" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="13" rx="2" />
+        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+      </symbol>
+      <symbol id="i-imagen" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <circle cx="8.5" cy="9" r="1.5" />
+        <path d="m21 15-4.5-4.5L7 20" />
+      </symbol>
+      <symbol id="i-reloj" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <path d="M12 8v4l3 2" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 5 5L20 7" />
+      </symbol>
+      <symbol id="i-filtro" viewBox="0 0 24 24">
+        <path d="M3 5h18l-7 8v5l-4 2v-7z" />
+      </symbol>
+      <symbol id="i-hoja" viewBox="0 0 24 24">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z" />
+        <path d="M2 21c0-3 1.8-5.4 5.1-6" />
+      </symbol>
+      <symbol id="i-llave" viewBox="0 0 24 24">
+        <circle cx="8" cy="15" r="4" />
+        <path d="m11 12 9-9 2 2-3 1-1 3-2 1" />
+      </symbol>
+      <symbol id="i-cuadros" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </symbol>
+      <symbol id="i-telefono" viewBox="0 0 24 24">
+        <path d="M8 3h3l1 4-2 1a12 12 0 0 0 6 6l1-2 4 1v3a2 2 0 0 1-2 2A16 16 0 0 1 6 5a2 2 0 0 1 2-2z" />
+      </symbol>
     </svg>
   );
 }

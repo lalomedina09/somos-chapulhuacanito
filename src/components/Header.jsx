@@ -6,8 +6,8 @@ import Icon from './Icon';
 
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja';
-const desktopLink = `inline-flex min-h-11 items-center rounded-full px-2.5 py-2 transition hover:text-naranja-700 2xl:px-3 ${focusRing}`;
-const desktopActive = `relative inline-flex min-h-11 items-center rounded-full px-2.5 py-2 text-naranja-700 after:absolute after:inset-x-3 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-naranja-700 2xl:px-3 ${focusRing}`;
+const desktopLink = `inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-1 py-2 text-[12px] transition hover:text-naranja-700 xl:px-2 xl:text-[14px] 2xl:px-2.5 2xl:text-[15px] ${focusRing}`;
+const desktopActive = `relative inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-1 py-2 text-[12px] text-naranja-700 after:absolute after:inset-x-1 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-naranja-700 xl:px-2 xl:text-[14px] 2xl:px-2.5 2xl:text-[15px] ${focusRing}`;
 const mobileLink = `block min-h-11 rounded-xl px-4 py-3 hover:bg-white ${focusRing}`;
 const mobileActive = `block min-h-11 rounded-xl bg-naranja-50 px-4 py-3 text-naranja-700 ${focusRing}`;
 
@@ -81,14 +81,14 @@ export default function Header() {
           <img
             src={logo}
             alt="Somos Chapulhuacanito — Raíces, comunidad y futuro"
-            className="h-11 w-auto lg:h-14"
+            className="h-11 w-auto lg:h-12 xl:h-14"
             width="186"
             height="56"
           />
         </Link>
 
-        <nav className="hidden min-w-0 xl:block" aria-label="Navegación principal">
-          <ul className="flex items-center gap-0.5 text-[15px] font-medium text-tinta/80 2xl:gap-1">
+        <nav className="hidden shrink-0 lg:block" aria-label="Navegación principal">
+          <ul className="flex items-center font-medium text-tinta/80">
             {mainNav.map((item) => (
               <li key={item.to}>
                 <NavLink
@@ -113,7 +113,7 @@ export default function Header() {
           </Link>
           <NavLink
             to="/avisos"
-            className={`relative grid h-11 w-11 place-items-center rounded-full text-tinta/80 transition hover:bg-naranja-50 hover:text-naranja-700 xl:hidden ${focusRing}`}
+            className={`relative grid h-11 w-11 place-items-center rounded-full text-tinta/80 transition hover:bg-naranja-50 hover:text-naranja-700 lg:hidden ${focusRing}`}
             aria-label="Avisos (3 nuevos)"
           >
             <Icon id="i-campana" className="icono h-5 w-5" />
@@ -121,7 +121,7 @@ export default function Header() {
           </NavLink>
           <button
             type="button"
-            className={`hidden min-h-11 cursor-pointer whitespace-nowrap rounded-full border-0 bg-naranja px-5 py-3 font-sans text-sm font-semibold text-white shadow-md shadow-naranja/30 transition hover:bg-naranja-600 sm:inline-flex ${focusRing}`}
+            className={`hidden min-h-11 cursor-pointer whitespace-nowrap rounded-full border-0 bg-naranja px-3 py-3 font-sans text-[13px] font-semibold text-white shadow-md shadow-naranja/30 transition hover:bg-naranja-600 sm:inline-flex xl:px-5 xl:text-sm ${focusRing}`}
           >
             Iniciar sesión
           </button>
@@ -129,7 +129,7 @@ export default function Header() {
             id="btn-menu"
             ref={buttonRef}
             type="button"
-            className={`grid h-11 w-11 cursor-pointer place-items-center rounded-full border-0 bg-transparent font-sans text-tinta transition hover:bg-naranja-50 xl:hidden ${focusRing}`}
+            className={`grid h-11 w-11 cursor-pointer place-items-center rounded-full border-0 bg-transparent font-sans text-tinta transition hover:bg-naranja-50 lg:hidden ${focusRing}`}
             aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={open}
             aria-controls="menu-movil"
@@ -143,7 +143,7 @@ export default function Header() {
       <nav
         id="menu-movil"
         ref={menuRef}
-        className={`${open ? '' : 'hidden'} max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-crema-200 bg-crema lg:max-h-[calc(100dvh-5rem)] xl:hidden`}
+        className={`${open ? '' : 'hidden'} max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-crema-200 bg-crema lg:hidden`}
         aria-label="Navegación móvil"
       >
         <ul className="mx-auto grid max-w-7xl gap-1 px-4 py-4 pb-28 text-base font-medium sm:px-6 lg:pb-4">

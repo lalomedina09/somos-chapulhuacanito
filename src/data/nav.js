@@ -6,6 +6,7 @@ export const mainNav = [
   { label: 'Turismo', to: '/turismo' },
   { label: 'Cultura', to: '/cultura' },
   { label: 'Noticias', to: '/noticias' },
+  { label: 'Bolsa de trabajo', to: '/bolsa-de-trabajo' },
 ];
 
 export const searchTags = [
@@ -14,6 +15,7 @@ export const searchTags = [
   { label: 'Servicios', to: '/servicios' },
   { label: 'Eventos', to: '/eventos' },
   { label: 'Turismo', to: '/turismo' },
+  { label: 'Bolsa de trabajo', to: '/bolsa-de-trabajo' },
 ];
 
 export const footerExplore = [
@@ -28,6 +30,7 @@ export const footerParticipa = [
   { label: 'Eventos', to: '/eventos' },
   { label: 'Reporta un problema', to: '/reportar' },
   { label: 'Registra tu negocio', to: '/negocios#registrar' },
+  { label: 'Bolsa de trabajo', to: '/bolsa-de-trabajo' },
 ];
 
 export const bottomNav = [
