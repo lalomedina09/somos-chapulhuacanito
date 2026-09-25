@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <g id="arbol">
+      <rect x="-4" y="10" width="8" height="22" rx="2" fill="#6b4423"/>
+      <circle cx="0" cy="2" r="16" fill="#2f7640"/>
+      <circle cx="-12" cy="8" r="12" fill="#26703c"/>
+      <circle cx="12" cy="8" r="12" fill="#26703c"/>
+      <circle cx="0" cy="12" r="13" fill="#3d9454"/>
+      <circle cx="-4" cy="-2" r="7" fill="#5aaa68"/>
+    </g>
+    <g id="palma">
+      <path d="M0 36c1-14 1-24 0-36" stroke="#6b4423" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M0 8C-14 0-26 6-34 14" stroke="#1f6b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M0 8C14-2 28 2 36 12" stroke="#2f7640" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M0 6C-6-10 0-24 6-32" stroke="#2f7640" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M0 10C8 2 10 16 4 22" stroke="#1f6b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="casa">
+      <rect x="0" y="18" width="52" height="34" rx="3" fill="#fff6ea" stroke="#e4d3bc"/>
+      <polygon points="-2,18 26,2 54,18" fill="#d4562e"/>
+      <rect x="20" y="32" width="12" height="20" fill="#7a4a2a"/>
+      <rect x="6" y="26" width="10" height="9" fill="#8ecae6"/>
+      <rect x="36" y="26" width="10" height="9" fill="#8ecae6"/>
+    </g>
+    <g id="flor">
+      <circle cx="0" cy="0" r="6" fill="#f76707"/>
+      <circle cx="0" cy="-7" r="3.2" fill="#ff922b"/>
+      <circle cx="6" cy="-3" r="3.2" fill="#fd7e14"/>
+      <circle cx="5" cy="5" r="3.2" fill="#ffb020"/>
+      <circle cx="-5" cy="5" r="3.2" fill="#f59f00"/>
+      <circle cx="-6" cy="-3" r="3.2" fill="#ff922b"/>
+      <circle cx="0" cy="0" r="2.4" fill="#ffd43b"/>
+    </g>
+  </defs>
+  <rect width="800" height="520" fill="#e7f3dc"/>
+  <ellipse cx="140" cy="70" rx="180" ry="64" fill="#d5ebc6"/>
+  <ellipse cx="520" cy="48" rx="240" ry="70" fill="#cfe4b8"/>
+  <ellipse cx="700" cy="150" rx="140" ry="80" fill="#d7ecc8"/>
+  <ellipse cx="80" cy="470" rx="160" ry="70" fill="#d3e8c0"/>
+  <ellipse cx="640" cy="490" rx="200" ry="60" fill="#d7ecc8"/>
+
+  <path d="M-20 150C90 190 150 110 250 145c100 36 150 20 230-10 90-34 150 20 250 8 70-8 110 20 140 10" stroke="#7ec8ea" stroke-width="30" fill="none" stroke-linecap="round"/>
+  <path d="M-20 150C90 190 150 110 250 145c100 36 150 20 230-10 90-34 150 20 250 8 70-8 110 20 140 10" stroke="#b9e4f6" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+  <path d="M0 230H800M0 430H800M250 230V430M560 230V430" stroke="#fff" stroke-width="18" fill="none" stroke-linejoin="round"/>
+  <path d="M0 230H800M0 430H800M250 230V430M560 230V430" stroke="#f2c14e" stroke-width="2.5" fill="none" stroke-dasharray="10 12"/>
+
+  <rect x="270" y="248" width="270" height="164" rx="18" fill="#f8f1e4" stroke="#e6d5bc"/>
+  <rect x="300" y="278" width="210" height="110" rx="10" fill="#f3e6cf"/>
+
+  <g transform="translate(392 300)">
+    <ellipse cx="0" cy="28" rx="26" ry="8" fill="#e7d3b0"/>
+    <rect x="-3" y="8" width="6" height="22" fill="#8d5a32"/>
+    <polygon points="-22,10 0,-8 22,10" fill="#c4472a"/>
+    <rect x="-16" y="10" width="32" height="8" fill="#f6e29a" stroke="#e2c56a"/>
+  </g>
+
+  <g transform="translate(338 214)">
+    <rect x="18" y="36" width="130" height="58" rx="3" fill="#f7e7b8" stroke="#e2c56a"/>
+    <polygon points="10,36 83,8 156,36" fill="#c4472a"/>
+    <rect x="70" y="8" width="26" height="48" fill="#f6e29a" stroke="#e2c56a"/>
+    <polygon points="70,8 83,-8 96,8" fill="#c4472a"/>
+    <rect x="80" y="-16" width="6" height="12" fill="#6b4423"/>
+    <rect x="76" y="-16" width="14" height="3" fill="#6b4423"/>
+    <rect x="30" y="52" width="16" height="20" rx="8" fill="#8ecae6"/>
+    <rect x="118" y="52" width="16" height="20" rx="8" fill="#8ecae6"/>
+    <path d="M68 94V70a14 14 0 0 1 28 0v24z" fill="#6b3a22"/>
+    <rect x="78" y="18" width="10" height="16" rx="5" fill="#8ecae6"/>
+  </g>
+
+  <use href="#casa" x="70" y="300"/>
+  <use href="#casa" x="140" y="250"/>
+  <use href="#casa" x="150" y="360"/>
+  <use href="#casa" x="600" y="250"/>
+  <use href="#casa" x="680" y="300"/>
+  <use href="#casa" x="70" y="360"/>
+
+  <g transform="translate(144 188)">
+    <rect x="0" y="10" width="58" height="40" rx="4" fill="#fff" stroke="#e4d3bc"/>
+    <polygon points="-2,10 29,-6 60,10" fill="#e03131"/>
+    <rect x="24" y="22" width="10" height="22" fill="#e03131"/>
+    <rect x="18" y="28" width="22" height="10" fill="#e03131"/>
+  </g>
+
+  <g transform="translate(640 250)">
+    <rect x="0" y="16" width="70" height="28" rx="3" fill="#fff6ea" stroke="#e4d3bc"/>
+    <polygon points="0,16 18,4 36,16" fill="#f59f00"/>
+    <polygon points="32,16 50,4 70,16" fill="#d4562e"/>
+    <rect x="8" y="24" width="16" height="12" fill="#ffe8cc"/>
+    <rect x="32" y="24" width="16" height="12" fill="#ffe8cc"/>
+    <rect x="52" y="24" width="12" height="12" fill="#ffe8cc"/>
+  </g>
+
+  <g>
+    <rect x="620" y="400" width="120" height="70" rx="8" fill="#e7f5ff" stroke="#74c0fc"/>
+    <path d="M644 400v70M684 400v70M724 400v70" stroke="#fff" stroke-width="4"/>
+  </g>
+
+  <use href="#arbol" x="40" y="250"/>
+  <use href="#arbol" x="210" y="200"/>
+  <use href="#arbol" x="600" y="200"/>
+  <use href="#arbol" x="760" y="240"/>
+  <use href="#arbol" x="40" y="420"/>
+  <use href="#arbol" x="200" y="450"/>
+  <use href="#arbol" x="560" y="450"/>
+  <use href="#palma" x="720" y="150"/>
+  <use href="#palma" x="40" y="120"/>
+  <use href="#palma" x="300" y="40"/>
+
+  <use href="#flor" x="300" y="470"/>
+  <use href="#flor" x="330" y="488"/>
+  <use href="#flor" x="360" y="468"/>
+  <use href="#flor" x="230" y="300"/>
+  <use href="#flor" x="210" y="320"/>
+  <use href="#flor" x="500" y="250"/>
+  <use href="#flor" x="530" y="236"/>
+  <use href="#flor" x="180" y="400"/>
+
+  <path d="M300 236h220" stroke="#6b4423" stroke-width="1.5"/>
+  <path fill="#f26b1d" d="M308 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+  <path fill="#1f6b3a" d="M332 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+  <path fill="#f2a007" d="M356 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+  <path fill="#d6336c" d="M380 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+  <path fill="#7950f2" d="M404 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+  <path fill="#f26b1d" d="M428 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+  <path fill="#1f6b3a" d="M452 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+  <path fill="#f2a007" d="M476 236h18v12l-3 3-3-3-3 3-3-3-3 3-3-3z"/>
+</svg>
