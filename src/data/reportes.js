@@ -1,0 +1,50 @@
+export const tiposReporte = [
+  { id: 'bache', label: 'Bache o camino' },
+  { id: 'agua', label: 'Agua o fuga' },
+  { id: 'luz', label: 'Alumbrado' },
+  { id: 'basura', label: 'Basura' },
+  { id: 'otro', label: 'Otro' },
+];
+
+export const reportesIniciales = [
+  {
+    id: 'rp-1821',
+    folio: 'RP-2026-1821',
+    tipo: 'Bache o camino',
+    titulo: 'Bache frente a la cancha',
+    barrio: 'Centro',
+    estado: 'En proceso',
+    estadoClass: 'bg-naranja',
+    fecha: '14 de oct. 2026',
+  },
+  {
+    id: 'rp-1828',
+    folio: 'RP-2026-1828',
+    tipo: 'Agua o fuga',
+    titulo: 'Goteo en la toma de la esquina',
+    barrio: 'San José',
+    estado: 'Recibido',
+    estadoClass: 'bg-[#1C7ED6]',
+    fecha: '15 de oct. 2026',
+  },
+  {
+    id: 'rp-1790',
+    folio: 'RP-2026-1790',
+    tipo: 'Alumbrado',
+    titulo: 'Luminaria apagada del callejón',
+    barrio: 'Las Flores',
+    estado: 'Resuelto',
+    estadoClass: 'bg-verde',
+    fecha: '2 de oct. 2026',
+  },
+  {
+    id: 'rp-1804',
+    folio: 'RP-2026-1804',
+    tipo: 'Basura',
+    titulo: 'Basura acumulada junto al puente',
+    barrio: 'Arroyo Verde',
+    estado: 'En proceso',
+    estadoClass: 'bg-naranja',
+    fecha: '9 de oct. 2026',
+  },
+];

@@ -16,11 +16,29 @@ export default function NotFoundPage() {
       </p>
       <Link
         to="/"
-        className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-naranja px-6 py-3 font-semibold text-white shadow-md shadow-naranja/30 transition hover:bg-naranja-600"
+        className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-naranja px-6 py-3 font-semibold text-white shadow-md shadow-naranja/30 transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
       >
         Volver al inicio
         <Icon id="i-flecha" className="icono h-4 w-4" />
       </Link>
+      <ul className="mt-8 flex flex-wrap gap-2">
+        {[
+          ['Comunidad', '/comunidad'],
+          ['Avisos', '/avisos'],
+          ['Negocios', '/negocios'],
+          ['Mapa', '/mapa'],
+          ['Reportar', '/reportar'],
+        ].map(([label, to]) => (
+          <li key={to}>
+            <Link
+              to={to}
+              className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-tinta shadow-sm ring-1 ring-crema-200 hover:text-naranja focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

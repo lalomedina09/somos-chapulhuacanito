@@ -27,7 +27,7 @@ export const footerParticipa = [
   { label: 'Avisos y noticias', to: '/avisos' },
   { label: 'Eventos', to: '/eventos' },
   { label: 'Reporta un problema', to: '/reportar' },
-  { label: 'Registra tu negocio', to: '/negocios' },
+  { label: 'Registra tu negocio', to: '/negocios#registrar' },
 ];
 
 export const bottomNav = [

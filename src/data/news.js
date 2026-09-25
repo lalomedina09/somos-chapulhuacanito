@@ -15,7 +15,7 @@ export const newsItems = [
     summary: 'Se realizarán trabajos de mantenimiento en la red. Toma tus precauciones.',
     date: 'Hoy, 15 de oct. 2026',
     dateTime: '2026-10-15',
-    to: '/avisos',
+    to: '/avisos/suspension-agua',
   },
   {
     id: 'xantolo',
@@ -28,7 +28,7 @@ export const newsItems = [
     summary: 'Reunión comunitaria',
     date: '17 de oct. 2026',
     dateTime: '2026-10-17',
-    to: '/eventos',
+    to: '/eventos/preparativos-xantolo',
   },
   {
     id: 'salud',
@@ -41,7 +41,7 @@ export const newsItems = [
     summary: 'Consultas generales y vacunación',
     date: '16 de oct. 2026',
     dateTime: '2026-10-16',
-    to: '/servicios',
+    to: '/eventos/jornada-medica',
   },
   {
     id: 'caminos',
@@ -54,6 +54,6 @@ export const newsItems = [
     summary: 'Avance de obras comunitarias',
     date: '14 de oct. 2026',
     dateTime: '2026-10-14',
-    to: '/noticias',
+    to: '/noticias/mejora-caminos',
   },
 ];
