@@ -28,7 +28,28 @@ El build de producción usa la base `/somos-chapulhuacanito/` para GitHub Pages.
 
 **http://localhost:4173/somos-chapulhuacanito/**
 
-`npm run build` copia `index.html` a `dist/404.html`. Así, al publicar el contenido de `dist/` en GitHub Pages, un refresco en una ruta interna (por ejemplo `/somos-chapulhuacanito/avisos`) sigue abriendo la aplicación.
+`npm run build` copia `index.html` a `dist/404.html`. Así, un refresco en una ruta interna (por ejemplo `/somos-chapulhuacanito/avisos`) sigue abriendo la aplicación. `public/.nojekyll` llega a `dist/` para que Pages no procese el sitio con Jekyll.
+
+## Publicación en GitHub Pages
+
+El sitio publicado queda en **https://lalomedina09.github.io/somos-chapulhuacanito/**.
+
+El workflow `.github/workflows/deploy.yml` compila con Node 22 (`npm ci` y `npm run build`) y publica el contenido de `dist/`. Se dispara al hacer push a `main` y también se puede lanzar a mano.
+
+Una sola vez, al pasar el despliegue a Actions: en el repositorio, **Settings → Pages → Build and deployment → Source: GitHub Actions**. Hoy Pages sigue publicando la raíz de `main` al estilo anterior; ese ajuste se cambia en el momento del merge, no antes.
+
+Para lanzarlo a mano: pestaña **Actions**, workflow **Publicar en GitHub Pages**, **Run workflow**.
+
+Para ver el build de producción en local:
+
+```bash
+npm run build
+npm run preview
+```
+
+**http://localhost:4173/somos-chapulhuacanito/**
+
+Cada pull request hacia `main` ejecuta `.github/workflows/ci.yml` (`npm ci` y `npm run build`) y muestra el resultado en la comprobación del PR.
 
 ## Rutas
 
