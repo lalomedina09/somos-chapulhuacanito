@@ -37,7 +37,14 @@ export default function ScrollToTop() {
       scrollForLocation(hash);
       root.style.scrollBehavior = '';
     });
-    return () => cancelAnimationFrame(frame);
+    const timer = window.setTimeout(() => {
+      scrollForLocation(hash);
+      root.style.scrollBehavior = '';
+    }, 60);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.clearTimeout(timer);
+    };
   }, [pathname, hash]);
 
   return null;

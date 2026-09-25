@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Evita que Chrome reacomode el scroll al cambiar de una página larga a una corta. */
+html {
+  overflow-anchor: none;
+}
+
 @theme {
   --color-crema: #fff8ef;
   --color-crema-100: #fdefdc;
