@@ -7,12 +7,12 @@ export default function FormField({ id, label, hint, error, children }) {
       <label htmlFor={id} className="text-sm font-semibold text-tinta">
         {label}
       </label>
-      {hint ? <p className="mt-0.5 text-xs text-tinta/60">{hint}</p> : null}
+      {hint ? <p className="mt-0.5 text-xs text-tinta/70">{hint}</p> : null}
       <div className={error ? '[&_input]:border-[#E03131] [&_select]:border-[#E03131] [&_textarea]:border-[#E03131]' : undefined}>
         {children}
       </div>
       {error ? (
-        <p id={`${id}-error`} className="mt-1 text-sm font-medium text-[#E03131]">
+        <p id={`${id}-error`} role="alert" className="mt-1 text-sm font-medium text-[#E03131]">
           {error}
         </p>
       ) : null}

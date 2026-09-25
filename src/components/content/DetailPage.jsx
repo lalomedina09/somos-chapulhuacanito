@@ -51,7 +51,7 @@ export default function DetailPage({ item, backTo, backLabel, kicker, children }
             <dl className="mt-4 space-y-4">
               {item.facts?.map((fact) => (
                 <div key={fact.label}>
-                  <dt className="text-xs font-semibold uppercase tracking-wide text-tinta/50">{fact.label}</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-tinta/70">{fact.label}</dt>
                   <dd className="mt-1 break-words text-sm font-medium text-tinta">{fact.value}</dd>
                 </div>
               ))}
@@ -59,7 +59,7 @@ export default function DetailPage({ item, backTo, backLabel, kicker, children }
             {item.whatsapp ? (
               <a
                 href={item.whatsapp}
-                className="mt-6 inline-flex rounded-full bg-verde px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-verde-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-verde"
+                className="mt-6 inline-flex min-h-11 items-center rounded-full bg-verde px-5 text-sm font-semibold text-white transition hover:bg-verde-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-verde"
               >
                 WhatsApp de ejemplo
               </a>

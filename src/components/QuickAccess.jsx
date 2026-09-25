@@ -8,7 +8,7 @@ export default function QuickAccess() {
       <ul className="grid grid-cols-4 gap-x-2 gap-y-5 rounded-3xl bg-white p-4 shadow-suave sm:p-6 lg:grid-cols-8 lg:gap-4">
         {quickAccess.map((item) => (
           <li key={item.id}>
-            <Link to={item.to} className="group flex flex-col items-center gap-2 text-center">
+            <Link to={item.to} className="group flex flex-col items-center gap-2 rounded-2xl text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja">
               <span
                 className={`grid h-14 w-14 place-items-center rounded-2xl transition group-hover:-translate-y-1 lg:h-16 lg:w-16 ${item.tileClass}`}
               >

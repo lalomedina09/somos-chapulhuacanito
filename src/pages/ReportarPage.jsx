@@ -101,7 +101,7 @@ export default function ReportarPage() {
                 </p>
                 <button
                   type="button"
-                  className="mt-6 rounded-full bg-naranja px-5 py-2.5 text-sm font-semibold text-white"
+                  className="mt-6 inline-flex min-h-11 items-center rounded-full bg-naranja px-5 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
                   onClick={() => {
                     setSuccess(null);
                     setForm(emptyForm);
@@ -116,7 +116,7 @@ export default function ReportarPage() {
             ) : (
               <form className="grid gap-4" noValidate onSubmit={submit}>
                 <FormField id="tipo" label="Tipo de reporte" error={errors.tipo}>
-                  <select id="tipo" className={fieldClass} value={form.tipo} aria-invalid={Boolean(errors.tipo)} aria-describedby={errors.tipo ? 'tipo-error' : undefined} onChange={(event) => update('tipo', event.target.value)}>
+                  <select id="tipo" name="tipo" autoComplete="off" className={fieldClass} value={form.tipo} aria-invalid={Boolean(errors.tipo)} aria-describedby={errors.tipo ? 'tipo-error' : undefined} onChange={(event) => update('tipo', event.target.value)}>
                     <option value="">Elige uno</option>
                     {tiposReporte.map((tipo) => (
                       <option key={tipo.id} value={tipo.id}>{tipo.label}</option>
@@ -124,10 +124,10 @@ export default function ReportarPage() {
                   </select>
                 </FormField>
                 <FormField id="descripcion" label="Descripción" hint="Qué pasa y desde cuándo, con tus palabras." error={errors.descripcion}>
-                  <textarea id="descripcion" rows={5} className={fieldClass} value={form.descripcion} aria-invalid={Boolean(errors.descripcion)} aria-describedby={errors.descripcion ? 'descripcion-error' : undefined} onChange={(event) => update('descripcion', event.target.value)} />
+                  <textarea id="descripcion" name="descripcion" autoComplete="off" rows={5} className={fieldClass} value={form.descripcion} aria-invalid={Boolean(errors.descripcion)} aria-describedby={errors.descripcion ? 'descripcion-error' : undefined} onChange={(event) => update('descripcion', event.target.value)} />
                 </FormField>
                 <FormField id="barrio" label="Ubicación o barrio" error={errors.barrio}>
-                  <select id="barrio" className={fieldClass} value={form.barrio} aria-invalid={Boolean(errors.barrio)} aria-describedby={errors.barrio ? 'barrio-error' : undefined} onChange={(event) => update('barrio', event.target.value)}>
+                  <select id="barrio" name="barrio" autoComplete="off" className={fieldClass} value={form.barrio} aria-invalid={Boolean(errors.barrio)} aria-describedby={errors.barrio ? 'barrio-error' : undefined} onChange={(event) => update('barrio', event.target.value)}>
                     <option value="">Elige un barrio</option>
                     {barrios.map((barrio) => (
                       <option key={barrio.id} value={barrio.id}>{barrio.name}</option>
@@ -144,7 +144,7 @@ export default function ReportarPage() {
                   </div>
                 ) : null}
                 <FormField id="contacto" label="Contacto (opcional)" hint="Correo o 10 dígitos. Ejemplo: ejemplo@correo.ejemplo" error={errors.contacto}>
-                  <input id="contacto" className={fieldClass} value={form.contacto} aria-invalid={Boolean(errors.contacto)} aria-describedby={errors.contacto ? 'contacto-error' : undefined} onChange={(event) => update('contacto', event.target.value)} />
+                  <input id="contacto" name="contacto" type="text" inputMode="text" autoComplete="off" className={fieldClass} value={form.contacto} aria-invalid={Boolean(errors.contacto)} aria-describedby={errors.contacto ? 'contacto-error' : undefined} onChange={(event) => update('contacto', event.target.value)} />
                 </FormField>
                 <PrimaryButton type="submit">Enviar reporte de ejemplo</PrimaryButton>
               </form>
@@ -152,7 +152,7 @@ export default function ReportarPage() {
           </div>
           <aside>
             <h2 className="text-xl font-bold">Reportes recientes</h2>
-            <p className="mt-1 text-sm text-tinta/60">Lista de ejemplo. El que acabas de capturar aparece arriba.</p>
+            <p className="mt-1 text-sm text-tinta/70">Lista de ejemplo. El que acabas de capturar aparece arriba.</p>
             <ul className="mt-4 space-y-3">
               {reportes.map((reporte) => (
                 <li key={reporte.id} className="rounded-2xl bg-white p-4 shadow-tarjeta">
@@ -160,14 +160,14 @@ export default function ReportarPage() {
                     <img src={reporte.image} alt={reporte.alt} className="h-16 w-20 shrink-0 rounded-xl object-cover" loading="lazy" />
                     <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <p className="text-xs font-semibold text-tinta/50">{reporte.folio}</p>
+                    <p className="text-xs font-semibold text-tinta/70">{reporte.folio}</p>
                     <Badge className={reporte.estadoClass}>{reporte.estado}</Badge>
                   </div>
                   <h3 className="mt-2 font-bold">{reporte.titulo}</h3>
                   <p className="mt-1 text-sm text-tinta/70">
                     {reporte.tipo} · {reporte.barrio}
                   </p>
-                  <p className="mt-1 text-xs text-tinta/50">{reporte.fecha}</p>
+                  <p className="mt-1 text-xs text-tinta/70">{reporte.fecha}</p>
                     </div>
                   </div>
                 </li>

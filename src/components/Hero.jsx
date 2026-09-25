@@ -55,13 +55,17 @@ export default function Hero() {
               <Icon id="i-buscar" className="icono h-5 w-5 shrink-0 text-tinta/50" />
               <input
                 id="q"
+                name="q"
                 type="search"
+                inputMode="search"
+                autoComplete="off"
+                enterKeyHint="search"
                 placeholder="¿Qué estás buscando?"
-                className="w-full min-w-0 bg-transparent px-3 py-2.5 text-base text-tinta placeholder:text-tinta/50 focus:outline-none"
+                className="min-h-11 w-full min-w-0 bg-transparent px-3 py-2.5 text-base text-tinta placeholder:text-tinta/50 focus:outline-none"
               />
               <button
                 type="submit"
-                className="hidden shrink-0 rounded-full bg-naranja px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-naranja-600 sm:block"
+                className="hidden min-h-11 shrink-0 rounded-full bg-naranja px-5 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja sm:inline-flex sm:items-center"
               >
                 Buscar
               </button>
@@ -73,7 +77,7 @@ export default function Hero() {
               <li key={tag.to}>
                 <Link
                   to={tag.to}
-                  className="inline-block rounded-full bg-white/90 px-4 py-1.5 text-sm font-medium text-tinta shadow-sm backdrop-blur transition hover:bg-white hover:text-naranja"
+                  className="inline-flex min-h-11 items-center rounded-full bg-white/90 px-4 text-sm font-medium text-tinta shadow-sm backdrop-blur transition hover:bg-white hover:text-naranja-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   {tag.label}
                 </Link>

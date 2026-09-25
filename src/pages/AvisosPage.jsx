@@ -36,7 +36,7 @@ export default function AvisosPage() {
       </PageHero>
       <PageSection>
         <FilterChips label="Categoría de avisos" options={avisoCategories} value={category} onChange={setCategory} />
-        <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
+        <p className="mt-4 text-sm text-tinta/70" aria-live="polite">
           {visible.length} {visible.length === 1 ? 'aviso' : 'avisos'}
         </p>
         {visible.length === 0 ? (

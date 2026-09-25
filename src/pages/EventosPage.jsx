@@ -35,7 +35,7 @@ export default function EventosPage() {
           <FilterChips label="Mes" options={eventoMonths} value={month} onChange={setMonth} />
           <FilterChips label="Tipo de evento" options={eventoCategories} value={category} onChange={setCategory} />
         </div>
-        <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
+        <p className="mt-4 text-sm text-tinta/70" aria-live="polite">
           {visible.length} {visible.length === 1 ? 'evento' : 'eventos'}
         </p>
         {visible.length === 0 ? (

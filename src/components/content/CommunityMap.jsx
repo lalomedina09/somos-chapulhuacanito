@@ -36,7 +36,7 @@ export default function CommunityMap() {
         <div className="overflow-hidden rounded-2xl bg-white shadow-tarjeta">
           <div className="relative aspect-[8/5] w-full">
             {/* REEMPLAZAR con foto real de la comunidad si el mapa ilustrado se sustituye por una imagen */}
-            <img src={mapa} alt="Mapa ilustrado de ejemplo de Chapulhuacanito, con calles, río y casas" className="h-full w-full object-cover" />
+            <img src={mapa} alt="Mapa ilustrado de ejemplo de Chapulhuacanito, con calles, río y casas" className="h-full w-full object-cover" width="800" height="500" />
             {visible.map((place) => {
               const active = place.id === selected?.id;
               return (
@@ -48,15 +48,19 @@ export default function CommunityMap() {
                   aria-label={place.name}
                   onClick={() => setSelectedId(place.id)}
                   style={{ left: `${place.x}%`, top: `${place.y}%` }}
-                  className={`absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja ${
-                    place.overlay ? 'h-12 w-12 bg-transparent' : 'h-5 w-5 border-2 border-white shadow'
-                  } ${place.overlay ? '' : place.pinClass} ${active ? 'ring-4 ring-naranja' : 'hover:ring-2 hover:ring-white'}`}
-                />
+                  className={`absolute z-10 grid h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja ${
+                    active ? 'ring-4 ring-naranja' : ''
+                  }`}
+                >
+                  {place.overlay ? null : (
+                    <span className={`h-5 w-5 rounded-full border-2 border-white shadow ${place.pinClass}`} aria-hidden="true" />
+                  )}
+                </button>
               );
             })}
           </div>
         </div>
-        <p className="mt-3 text-sm text-tinta/60">
+        <p className="mt-3 text-sm text-tinta/70">
           Mapa ilustrado de ejemplo. Los pines no usan un servicio externo.
         </p>
       </div>
@@ -66,7 +70,7 @@ export default function CommunityMap() {
         <div className="mt-4">
           <FilterChips label="Categoría del mapa" options={lugarCategories} value={category} onChange={setCategory} />
         </div>
-        <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
+        <p className="mt-4 text-sm text-tinta/70" aria-live="polite">
           {visible.length} {visible.length === 1 ? 'lugar' : 'lugares'}
         </p>
         {visible.length === 0 ? (
@@ -110,7 +114,7 @@ export default function CommunityMap() {
         {selected ? (
           <Link
             to={selected.to}
-            className="mt-4 inline-flex rounded-full bg-naranja px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
+            className="mt-4 inline-flex min-h-11 items-center rounded-full bg-naranja px-5 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
           >
             Ver {selected.name}
           </Link>

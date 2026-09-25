@@ -8,7 +8,7 @@ export default function EmptyState({ title, text, onClear }) {
         <button
           type="button"
           onClick={onClear}
-          className="mt-6 inline-flex rounded-full bg-naranja px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
+          className="mt-6 inline-flex min-h-11 items-center rounded-full bg-naranja px-5 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
         >
           Limpiar búsqueda
         </button>

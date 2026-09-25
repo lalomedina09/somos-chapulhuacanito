@@ -77,13 +77,13 @@ export default function NewsCard({ item }) {
           <span className={`grid h-16 w-16 shrink-0 place-items-center rounded-2xl ${item.iconWrapClass}`}>
             <Icon id={item.icon} className={item.iconClass} />
           </span>
-          <h3 className="text-lg font-bold leading-snug">
-            <Link to={item.to} className="after:absolute after:inset-0">
+          <h3 className="line-clamp-3 text-lg font-bold leading-snug">
+            <Link to={item.to} className="rounded-sm after:absolute after:inset-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja">
               {item.title}
             </Link>
           </h3>
         </div>
-        <p className="mt-3 text-sm text-tinta/70">{item.summary}</p>
+        <p className="mt-3 line-clamp-3 text-sm text-tinta/70">{item.summary}</p>
         <div className="mt-auto flex items-center justify-between pt-5">
           <span className="inline-flex items-center gap-1.5 text-sm font-medium text-tinta/70">
             <Icon id="i-fecha" className="icono h-4 w-4" />
@@ -99,12 +99,12 @@ export default function NewsCard({ item }) {
     <article className="group relative flex w-[85%] shrink-0 snap-start flex-col overflow-hidden rounded-2xl bg-white shadow-tarjeta sm:w-[46%] lg:w-auto">
       <NewsPhoto item={item} />
       <div className="flex flex-1 flex-col p-4">
-        <h3 className="font-bold leading-snug">
-          <Link to={item.to} className="after:absolute after:inset-0">
+        <h3 className="line-clamp-2 font-bold leading-snug">
+          <Link to={item.to} className="rounded-sm after:absolute after:inset-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja">
             {item.title}
           </Link>
         </h3>
-        <p className="mt-1 text-sm text-tinta/70">{item.summary}</p>
+        <p className="mt-1 line-clamp-3 text-sm text-tinta/70">{item.summary}</p>
         <div className="mt-auto flex items-center justify-between pt-4">
           <span className="inline-flex items-center gap-1.5 text-sm text-tinta/70">
             <Icon id="i-fecha" className="icono h-4 w-4" />

@@ -32,7 +32,7 @@ export default function NotFoundPage() {
           <li key={to}>
             <Link
               to={to}
-              className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-tinta shadow-sm ring-1 ring-crema-200 hover:text-naranja focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
+              className="inline-flex min-h-11 items-center rounded-full bg-white px-4 text-sm font-semibold text-tinta shadow-sm ring-1 ring-crema-200 hover:text-naranja-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
             >
               {label}
             </Link>

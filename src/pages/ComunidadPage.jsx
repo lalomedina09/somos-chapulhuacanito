@@ -50,10 +50,10 @@ export default function ComunidadPage() {
               Un reporte, un negocio o una faena. El prototipo no envía nada: solo muestra el camino.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link to="/reportar" className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-verde">
+              <Link to="/reportar" className="inline-flex min-h-11 items-center rounded-full bg-white px-4 text-sm font-semibold text-verde focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                 Reportar
               </Link>
-              <Link to="/negocios#registrar" className="rounded-full bg-naranja px-4 py-2 text-sm font-semibold text-white">
+              <Link to="/negocios#registrar" className="inline-flex min-h-11 items-center rounded-full bg-naranja px-4 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                 Registrar negocio
               </Link>
             </div>
@@ -69,7 +69,7 @@ export default function ComunidadPage() {
               </div>
               <div className="p-5">
               <h3 className="text-lg font-bold">{barrio.name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-tinta/70">{barrio.summary}</p>
+              <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-tinta/70">{barrio.summary}</p>
               </div>
             </li>
           ))}
@@ -91,7 +91,7 @@ export default function ComunidadPage() {
             <li key={item.to}>
               <Link
                 to={item.to}
-                className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-tinta shadow-sm ring-1 ring-crema-200 transition hover:text-naranja focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
+                className="inline-flex min-h-11 items-center rounded-full bg-white px-4 text-sm font-semibold text-tinta shadow-sm ring-1 ring-crema-200 transition hover:text-naranja-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
               >
                 {item.label}
               </Link>

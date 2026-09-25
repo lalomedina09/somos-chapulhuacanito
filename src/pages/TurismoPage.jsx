@@ -36,7 +36,7 @@ export default function TurismoPage() {
       </PageHero>
       <PageSection>
         <FilterChips label="Tipo de atractivo" options={turismoCategories} value={category} onChange={setCategory} />
-        <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
+        <p className="mt-4 text-sm text-tinta/70" aria-live="polite">
           {visible.length} {visible.length === 1 ? 'lugar' : 'lugares'}
         </p>
         {visible.length === 0 ? (

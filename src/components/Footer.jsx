@@ -5,7 +5,7 @@ import Icon from './Icon';
 
 export default function Footer() {
   return (
-    <footer className="mt-16 bg-verde-900 pb-28 text-white/80 lg:pb-0">
+    <footer className="mt-16 bg-verde-900 pb-[calc(8rem+env(safe-area-inset-bottom))] text-white/80 lg:pb-0">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 px-4 py-12 sm:px-6 md:grid-cols-3 lg:grid-cols-[1.2fr_0.8fr_0.9fr_1.3fr] lg:px-8">
         <div className="col-span-2 md:col-span-3 lg:col-span-1">
           <img
@@ -21,11 +21,11 @@ export default function Footer() {
           </p>
         </div>
         <nav aria-label="Explora">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Explora</h3>
+          <p className="text-sm font-semibold uppercase tracking-wider text-white">Explora</p>
           <ul className="mt-4 space-y-2 text-sm">
             {footerExplore.map((item) => (
               <li key={item.label}>
-                <Link to={item.to} className="hover:text-[#FFB27A]">
+                <Link to={item.to} className="inline-flex min-h-11 items-center rounded-lg hover:text-[#FFB27A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFB27A]">
                   {item.label}
                 </Link>
               </li>
@@ -33,11 +33,11 @@ export default function Footer() {
           </ul>
         </nav>
         <nav aria-label="Participa">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Participa</h3>
+          <p className="text-sm font-semibold uppercase tracking-wider text-white">Participa</p>
           <ul className="mt-4 space-y-2 text-sm">
             {footerParticipa.map((item) => (
               <li key={item.label}>
-                <Link to={item.to} className="hover:text-[#FFB27A]">
+                <Link to={item.to} className="inline-flex min-h-11 items-center rounded-lg hover:text-[#FFB27A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFB27A]">
                   {item.label}
                 </Link>
               </li>
@@ -45,7 +45,7 @@ export default function Footer() {
           </ul>
         </nav>
         <div className="col-span-2 md:col-span-1">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contacto</h3>
+          <p className="text-sm font-semibold uppercase tracking-wider text-white">Contacto</p>
           {/* Datos de contacto de ejemplo: confirmar antes de publicar */}
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-start gap-2">
@@ -54,7 +54,7 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Icon id="i-correo" className="icono mt-0.5 h-4 w-4 shrink-0" />
-              <a href="mailto:contacto@somoschapulhuacanito.mx" className="[overflow-wrap:anywhere] hover:text-[#FFB27A]">
+              <a href="mailto:contacto@somoschapulhuacanito.mx" className="inline-flex min-h-11 items-center [overflow-wrap:anywhere] rounded-lg hover:text-[#FFB27A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFB27A]">
                 contacto@somoschapulhuacanito.mx
               </a>
             </li>

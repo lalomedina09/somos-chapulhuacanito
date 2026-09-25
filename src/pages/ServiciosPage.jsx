@@ -47,7 +47,7 @@ export default function ServiciosPage() {
                       <dd className="inline break-all text-tinta/80">{item.email}</dd>
                     </div>
                   </dl>
-                  <Link to={item.link.to} className="mt-4 inline-flex text-sm font-semibold text-naranja hover:text-naranja-700">
+                  <Link to={item.link.to} className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-naranja-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja">
                     {item.link.label} →
                   </Link>
                 </div>

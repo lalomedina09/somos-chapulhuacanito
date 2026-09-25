@@ -10,11 +10,15 @@ export default function SearchBar({ id, value, onChange, placeholder, label = 'B
         <Icon id="i-buscar" className="icono h-5 w-5 shrink-0 text-tinta/50" />
         <input
           id={id}
+          name={id}
           type="search"
+          inputMode="search"
+          autoComplete="off"
+          enterKeyHint="search"
           value={value}
           placeholder={placeholder}
           onChange={(event) => onChange(event.target.value)}
-          className="w-full min-w-0 bg-transparent px-3 py-2.5 text-base text-tinta placeholder:text-tinta/50 focus:outline-none"
+          className="min-h-11 w-full min-w-0 bg-transparent px-3 py-2.5 text-base text-tinta placeholder:text-tinta/50 focus:outline-none"
         />
       </div>
     </div>

@@ -22,7 +22,7 @@ export default function XantoloBanner() {
           <p className="mt-2 text-lg text-white/90 sm:text-xl">Tradición que nos une</p>
           <Link
             to="/cultura"
-            className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-naranja px-6 py-3 font-semibold text-white shadow-lg shadow-black/30 transition hover:bg-naranja-600"
+            className="mt-6 inline-flex min-h-11 w-fit items-center gap-2 rounded-full bg-naranja px-6 py-3 font-semibold text-white shadow-lg shadow-black/30 transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Conoce más <Icon id="i-flecha" className="icono h-4 w-4" />
           </Link>

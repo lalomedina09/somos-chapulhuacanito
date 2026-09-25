@@ -24,7 +24,7 @@ export default function TransportePage() {
       <PageHero kicker={section.kicker} title={section.title} intro={`${section.intro} Horarios y tarifas son de ejemplo.`} art={sectionArt.transporte} />
       <PageSection>
         <FilterChips label="Destino" options={destinos} value={destino} onChange={setDestino} />
-        <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
+        <p className="mt-4 text-sm text-tinta/70" aria-live="polite">
           {visible.length} {visible.length === 1 ? 'ruta' : 'rutas'}
         </p>
         {visible.length === 0 ? (
@@ -56,7 +56,7 @@ export default function TransportePage() {
                   <table className="w-full min-w-[28rem] text-left text-sm">
                     <caption className="sr-only">Horarios de {ruta.name}</caption>
                     <thead>
-                      <tr className="border-b border-crema-200 text-tinta/60">
+                      <tr className="border-b border-crema-200 text-tinta/70">
                         <th className="py-2 pr-4 font-semibold">Sale</th>
                         <th className="py-2 pr-4 font-semibold">Llega</th>
                         <th className="py-2 font-semibold">Nota</th>

@@ -24,7 +24,7 @@ export default function CulturaPage() {
           <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {xantoloDias.map((dia, index) => (
               <li key={dia.id} className="rounded-2xl bg-crema p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-tinta/50">Día {index + 1}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-tinta/70">Día {index + 1}</p>
                 <p className="font-mano text-3xl font-bold text-naranja">{dia.day}</p>
                 <h3 className="mt-1 font-bold">{dia.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-tinta/75">{dia.text}</p>
@@ -57,7 +57,7 @@ export default function CulturaPage() {
               <h3 className="text-lg font-bold">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-tinta/70">{item.text}</p>
               {item.to ? (
-                <Link to={item.to} className="mt-3 inline-flex text-sm font-semibold text-naranja hover:text-naranja-700">
+                <Link to={item.to} className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-naranja-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja">
                   Ver más →
                 </Link>
               ) : null}

@@ -76,7 +76,7 @@ export default function NegociosPage() {
       </PageHero>
       <PageSection>
         <FilterChips label="Categoría de negocios" options={negocioCategories} value={category} onChange={setCategory} />
-        <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
+        <p className="mt-4 text-sm text-tinta/70" aria-live="polite">
           {visible.length} {visible.length === 1 ? 'negocio' : 'negocios'}
         </p>
         {visible.length === 0 ? (
@@ -101,20 +101,20 @@ export default function NegociosPage() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h2 className="text-lg font-bold leading-snug">{item.title}</h2>
-                  <p className="mt-2 text-sm text-tinta/70">{item.summary}</p>
+                  <h2 className="line-clamp-2 text-lg font-bold leading-snug">{item.title}</h2>
+                  <p className="mt-2 line-clamp-3 text-sm text-tinta/70">{item.summary}</p>
                   <p className="mt-3 text-sm font-medium text-tinta/80">{item.horario}</p>
-                  <p className="text-sm text-tinta/60">{item.barrio}</p>
+                  <p className="text-sm text-tinta/70">{item.barrio}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     <Link
                       to={`/negocios/${item.id}`}
-                      className="rounded-full bg-naranja px-4 py-2 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
+                      className="inline-flex min-h-11 items-center rounded-full bg-naranja px-4 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
                     >
                       Ver ficha
                     </Link>
                     <a
                       href={item.whatsapp}
-                      className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-verde ring-1 ring-verde/30 transition hover:bg-verde-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-verde"
+                      className="inline-flex min-h-11 items-center rounded-full bg-white px-4 text-sm font-semibold text-verde ring-1 ring-verde/30 transition hover:bg-verde-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-verde"
                     >
                       WhatsApp
                     </a>
@@ -141,7 +141,7 @@ export default function NegociosPage() {
               </p>
               <button
                 type="button"
-                className="mt-4 text-sm font-semibold text-naranja"
+                className="mt-4 inline-flex min-h-11 items-center rounded-lg text-sm font-semibold text-naranja-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
                 onClick={() => {
                   setFolio('');
                   setForm(emptyForm);
@@ -153,10 +153,10 @@ export default function NegociosPage() {
           ) : (
             <form className="mt-6 grid gap-4 sm:grid-cols-2" noValidate onSubmit={submit}>
               <FormField id="nombre" label="Nombre del negocio" error={errors.nombre}>
-                <input id="nombre" className={fieldClass} value={form.nombre} aria-invalid={Boolean(errors.nombre)} aria-describedby={errors.nombre ? 'nombre-error' : undefined} onChange={(event) => update('nombre', event.target.value)} />
+                <input id="nombre" name="nombre" autoComplete="organization" className={fieldClass} value={form.nombre} aria-invalid={Boolean(errors.nombre)} aria-describedby={errors.nombre ? 'nombre-error' : undefined} onChange={(event) => update('nombre', event.target.value)} />
               </FormField>
               <FormField id="categoria" label="Categoría" error={errors.categoria}>
-                <select id="categoria" className={fieldClass} value={form.categoria} aria-invalid={Boolean(errors.categoria)} aria-describedby={errors.categoria ? 'categoria-error' : undefined} onChange={(event) => update('categoria', event.target.value)}>
+                <select id="categoria" name="categoria" autoComplete="off" className={fieldClass} value={form.categoria} aria-invalid={Boolean(errors.categoria)} aria-describedby={errors.categoria ? 'categoria-error' : undefined} onChange={(event) => update('categoria', event.target.value)}>
                   <option value="">Elige una</option>
                   {negocioCategories.filter((item) => item.id !== 'todos').map((item) => (
                     <option key={item.id} value={item.id}>{item.label}</option>
@@ -164,7 +164,7 @@ export default function NegociosPage() {
                 </select>
               </FormField>
               <FormField id="barrio" label="Barrio" error={errors.barrio}>
-                <select id="barrio" className={fieldClass} value={form.barrio} aria-invalid={Boolean(errors.barrio)} aria-describedby={errors.barrio ? 'barrio-error' : undefined} onChange={(event) => update('barrio', event.target.value)}>
+                <select id="barrio" name="barrio" autoComplete="off" className={fieldClass} value={form.barrio} aria-invalid={Boolean(errors.barrio)} aria-describedby={errors.barrio ? 'barrio-error' : undefined} onChange={(event) => update('barrio', event.target.value)}>
                   <option value="">Elige un barrio</option>
                   {barrios.map((barrio) => (
                     <option key={barrio.id} value={barrio.id}>{barrio.name}</option>
@@ -172,15 +172,15 @@ export default function NegociosPage() {
                 </select>
               </FormField>
               <FormField id="horario" label="Horario" error={errors.horario}>
-                <input id="horario" className={fieldClass} value={form.horario} placeholder="Lun a sáb, 8:00 a 16:00" aria-invalid={Boolean(errors.horario)} aria-describedby={errors.horario ? 'horario-error' : undefined} onChange={(event) => update('horario', event.target.value)} />
+                <input id="horario" name="horario" autoComplete="off" className={fieldClass} value={form.horario} placeholder="Lun a sáb, 8:00 a 16:00" aria-invalid={Boolean(errors.horario)} aria-describedby={errors.horario ? 'horario-error' : undefined} onChange={(event) => update('horario', event.target.value)} />
               </FormField>
               <div className="sm:col-span-2">
                 <FormField id="descripcion" label="Descripción" error={errors.descripcion}>
-                  <textarea id="descripcion" rows={4} className={fieldClass} value={form.descripcion} aria-invalid={Boolean(errors.descripcion)} aria-describedby={errors.descripcion ? 'descripcion-error' : undefined} onChange={(event) => update('descripcion', event.target.value)} />
+                  <textarea id="descripcion" name="descripcion" autoComplete="off" rows={4} className={fieldClass} value={form.descripcion} aria-invalid={Boolean(errors.descripcion)} aria-describedby={errors.descripcion ? 'descripcion-error' : undefined} onChange={(event) => update('descripcion', event.target.value)} />
                 </FormField>
               </div>
               <FormField id="whatsapp" label="WhatsApp (opcional)" hint="10 dígitos, sin lada. Ejemplo: 4810000000" error={errors.whatsapp}>
-                <input id="whatsapp" inputMode="numeric" className={fieldClass} value={form.whatsapp} aria-invalid={Boolean(errors.whatsapp)} aria-describedby={errors.whatsapp ? 'whatsapp-error' : undefined} onChange={(event) => update('whatsapp', event.target.value)} />
+                <input id="whatsapp" name="whatsapp" type="tel" inputMode="numeric" autoComplete="tel" className={fieldClass} value={form.whatsapp} aria-invalid={Boolean(errors.whatsapp)} aria-describedby={errors.whatsapp ? 'whatsapp-error' : undefined} onChange={(event) => update('whatsapp', event.target.value)} />
               </FormField>
               <div className="sm:col-span-2">
                 <PrimaryButton type="submit">Guardar en el prototipo</PrimaryButton>

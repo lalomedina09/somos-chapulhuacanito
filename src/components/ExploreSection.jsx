@@ -13,7 +13,7 @@ export default function ExploreSection() {
           </h2>
           <p className="mt-1 text-tinta/70">Conoce, participa y vive nuestras tradiciones.</p>
         </div>
-        <Link to="/comunidad" className="inline-flex items-center gap-1 text-sm font-semibold text-naranja hover:text-naranja-700">
+        <Link to="/comunidad" className="inline-flex min-h-11 items-center gap-1 rounded-lg text-sm font-semibold text-naranja-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja">
           Ver todas las secciones <Icon id="i-chevron" className="icono h-4 w-4" />
         </Link>
       </div>

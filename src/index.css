@@ -54,3 +54,32 @@ html {
     stroke-linejoin: round;
   }
 }
+
+/* El teclado móvil no debe tapar el campo ni el botón de enviar. */
+@media (max-width: 1023px) {
+  input,
+  select,
+  textarea,
+  button[type='submit'] {
+    scroll-margin-top: 5.5rem;
+    scroll-margin-bottom: 45vh;
+  }
+
+  body:has(:is(input, textarea, select):focus) [data-bottom-nav] {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

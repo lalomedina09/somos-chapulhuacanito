@@ -64,7 +64,7 @@ function Photo({ card }) {
 export default function ExploreCard({ card }) {
   return (
     <li>
-      <Link to={card.to} className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-tarjeta">
+      <Link to={card.to} className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-tarjeta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja">
         <Photo card={card} />
         <span className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
         <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-3 sm:p-4">

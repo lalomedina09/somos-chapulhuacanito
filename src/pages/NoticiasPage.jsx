@@ -45,13 +45,13 @@ export default function NoticiasPage() {
               <Photo src={featured.image} alt={featured.alt} className="h-full min-h-56 w-full object-cover" />
             </div>
             <div className="flex flex-col p-6 sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-wide text-naranja">Nota destacada</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-naranja-700">Nota destacada</p>
               <h2 className="mt-2 text-2xl font-bold sm:text-3xl">{featured.title}</h2>
               <p className="mt-3 text-tinta/75">{featured.summary}</p>
-              <p className="mt-3 text-sm text-tinta/60">{featured.date}</p>
+              <p className="mt-3 text-sm text-tinta/70">{featured.date}</p>
               <Link
                 to={`/noticias/${featured.id}`}
-                className="mt-6 inline-flex w-fit rounded-full bg-naranja px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
+                className="mt-6 inline-flex min-h-11 w-fit items-center rounded-full bg-naranja px-5 text-sm font-semibold text-white transition hover:bg-naranja-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-naranja"
               >
                 Leer nota
               </Link>
@@ -61,7 +61,7 @@ export default function NoticiasPage() {
         <div className="mt-8">
           <FilterChips label="Categoría de noticias" options={noticiaCategories} value={category} onChange={setCategory} />
         </div>
-        <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
+        <p className="mt-4 text-sm text-tinta/70" aria-live="polite">
           {visible.length} {visible.length === 1 ? 'nota' : 'notas'}
         </p>
         {visible.length === 0 ? (
