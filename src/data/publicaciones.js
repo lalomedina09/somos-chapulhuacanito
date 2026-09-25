@@ -13,6 +13,8 @@ import trioEscenario from '../assets/img/il-trio-escenario.svg'
 import trioDetalle from '../assets/img/il-trio-detalle.svg'
 import mapa from '../assets/img/il-mapa.svg'
 import hero from '../assets/img/bolsa-hero.svg'
+import { barrios } from './barrios.js'
+import { matchesQuery } from '../utils/text.js'
 
 export const HERO_BOLSA = hero
 
@@ -52,12 +54,8 @@ export const CATEGORIAS_EXTRA = [
 export const TODAS_CATEGORIAS = [...CATEGORIAS, ...CATEGORIAS_EXTRA]
 
 export const ZONAS = [
-  { id: 'centro', nombre: 'Centro' },
-  { id: 'san-jose', nombre: 'Barrio San José' },
-  { id: 'la-reforma', nombre: 'La Reforma' },
-  { id: 'el-carrizal', nombre: 'El Carrizal' },
-  { id: 'chapulhuacanito', nombre: 'Chapulhuacanito' },
-  { id: 'toda', nombre: 'Toda la región' },
+  ...barrios.map((barrio) => ({ id: barrio.id, nombre: barrio.name })),
+  { id: 'toda', nombre: 'Toda la comunidad' },
 ]
 
 export const TIPOS = [
@@ -93,8 +91,8 @@ export const PUBLICACIONES = [
     nombre: 'Trío Huasteco Los Morales',
     categoria: 'eventos',
     tipo: 'servicio',
-    zona: 'chapulhuacanito',
-    ubicacion: 'Chapulhuacanito, S.L.P.',
+    zona: 'centro',
+    ubicacion: 'Centro, Chapulhuacanito',
     calificacion: 4.9,
     resenas: 28,
     estado: 'Disponible para eventos',
@@ -234,8 +232,8 @@ export const PUBLICACIONES = [
     nombre: 'Peluquería y estética Mireya',
     categoria: 'belleza',
     tipo: 'servicio',
-    zona: 'la-reforma',
-    ubicacion: 'La Reforma',
+    zona: 'la-loma',
+    ubicacion: 'La Loma',
     calificacion: 4.5,
     resenas: 17,
     estado: 'Sin cita previa en la mañana',
@@ -244,11 +242,11 @@ export const PUBLICACIONES = [
     imagen: 'belleza',
     whatsapp: '5214831000006',
     resumen: 'Corte para toda la familia y arreglo de barba.',
-    descripcion: 'Peluquería de ejemplo en La Reforma. Atiende cortes de cabello y barba, sobre todo por las mañanas, sin tanta fila entre semana.',
+    descripcion: 'Peluquería de ejemplo en La Loma. Atiende cortes de cabello y barba, sobre todo por las mañanas, sin tanta fila entre semana.',
     incluye: ['Corte caballero y dama', 'Barba', 'Corte para niños'],
     info: {
       servicio: 'Peluquería',
-      cobertura: 'La Reforma',
+      cobertura: 'La Loma',
       horarios: 'Miércoles a lunes, 9:00 a.m. a 6:00 p.m.',
       experiencia: '5 años',
       respuesta: 'El mismo día',
@@ -309,8 +307,8 @@ export const PUBLICACIONES = [
     nombre: 'Transporte privado Los Cerros',
     categoria: 'transporte',
     tipo: 'servicio',
-    zona: 'el-carrizal',
-    ubicacion: 'El Carrizal',
+    zona: 'arroyo-verde',
+    ubicacion: 'Arroyo Verde',
     calificacion: 4.4,
     resenas: 15,
     estado: 'Salidas bajo reserva',
@@ -320,10 +318,10 @@ export const PUBLICACIONES = [
     whatsapp: '5214831000009',
     resumen: 'Viajes a Tamazunchale, clínica y encargos cuando no hay camión.',
     descripcion: 'Camioneta de ejemplo para traslados locales: clínica, mercado de Tamazunchale o un encargo. No es ruta pública. El costo se dice antes de salir.',
-    incluye: ['Viaje local hasta 4 personas', 'Encargos al mercado', 'Salida desde El Carrizal o el centro'],
+    incluye: ['Viaje local hasta 4 personas', 'Encargos al mercado', 'Salida desde Arroyo Verde o el centro'],
     info: {
       servicio: 'Transporte privado',
-      cobertura: 'El Carrizal, Chapulhuacanito y Tamazunchale',
+      cobertura: 'Arroyo Verde, Chapulhuacanito y Tamazunchale',
       horarios: 'Todos los días, de 6:00 a.m. a 8:00 p.m.',
       experiencia: '7 años',
       respuesta: 'En menos de una hora, si está en cobertura',
@@ -384,8 +382,8 @@ export const PUBLICACIONES = [
     nombre: 'Organización de eventos Flor de cempasúchil',
     categoria: 'eventos',
     tipo: 'emprendimiento',
-    zona: 'chapulhuacanito',
-    ubicacion: 'Chapulhuacanito',
+    zona: 'las-flores',
+    ubicacion: 'Las Flores',
     calificacion: 4.8,
     resenas: 13,
     estado: 'Fechas de octubre apartadas',
@@ -435,8 +433,8 @@ export const PUBLICACIONES = [
     nombre: 'Guía de caminos verdes',
     categoria: 'profesionales',
     tipo: 'servicio',
-    zona: 'el-carrizal',
-    ubicacion: 'El Carrizal',
+    zona: 'el-sabinal',
+    ubicacion: 'El Sabinal',
     calificacion: 5,
     resenas: 7,
     estado: 'Salidas los sábados',
@@ -450,7 +448,7 @@ export const PUBLICACIONES = [
     incluye: ['Guía de la comunidad', 'Recorrido de 3 horas', 'Indicaciones de seguridad', 'Grupo máximo de 8 personas'],
     info: {
       servicio: 'Guía local',
-      cobertura: 'El Carrizal y veredas cercanas',
+      cobertura: 'El Sabinal y veredas cercanas',
       horarios: 'Sábados, salida 8:00 a.m.',
       experiencia: 'Nacido en la comunidad',
       respuesta: 'En el día',
@@ -461,8 +459,8 @@ export const PUBLICACIONES = [
     nombre: 'Se busca ayudante de albañil',
     categoria: 'hogar',
     tipo: 'empleo',
-    zona: 'toda',
-    ubicacion: 'Obra en La Reforma',
+    zona: 'la-loma',
+    ubicacion: 'Obra en La Loma',
     calificacion: 0,
     resenas: 0,
     estado: 'Vacante abierta',
@@ -475,7 +473,7 @@ export const PUBLICACIONES = [
     incluye: ['Obra de unas 4 semanas', 'Pago semanal de ejemplo', 'Herramienta básica la pone la obra', 'Se da de alta el acuerdo por escrito'],
     info: {
       servicio: 'Empleo temporal · albañilería',
-      cobertura: 'La Reforma',
+      cobertura: 'La Loma',
       horarios: 'Lunes a sábado, 8:00 a.m. a 4:00 p.m.',
       experiencia: 'No indispensable; sí disponibilidad',
       respuesta: 'Se responden mensajes en dos días',
@@ -510,11 +508,11 @@ export const PUBLICACIONES = [
   }),
   base({
     id: 'miel-de-monte-el-carrizal',
-    nombre: 'Miel de monte El Carrizal',
+    nombre: 'Miel de monte El Sabinal',
     categoria: 'agricultura',
     tipo: 'emprendimiento',
-    zona: 'el-carrizal',
-    ubicacion: 'El Carrizal',
+    zona: 'el-sabinal',
+    ubicacion: 'El Sabinal',
     calificacion: 4.9,
     resenas: 12,
     estado: 'Hay frascos esta semana',
@@ -523,11 +521,11 @@ export const PUBLICACIONES = [
     imagen: 'agricultura',
     whatsapp: '5214831000017',
     resumen: 'Miel por frasco, de colmenas del monte. Entrega en el tianguis.',
-    descripcion: 'Emprendimiento familiar de ejemplo. Venden miel en frasco de medio litro y de litro. Se recoge en El Carrizal o en el tianguis del centro cuando avisan.',
+    descripcion: 'Emprendimiento familiar de ejemplo. Venden miel en frasco de medio litro y de litro. Se recoge en El Sabinal o en el tianguis del centro cuando avisan.',
     incluye: ['Frasco de medio litro o litro', 'Miel de la temporada', 'Entrega en tianguis', 'Puede apartarse por mensaje'],
     info: {
       servicio: 'Producto local · miel',
-      cobertura: 'El Carrizal y tianguis del centro',
+      cobertura: 'El Sabinal y tianguis del centro',
       horarios: 'Visitas sábados por la mañana',
       experiencia: 'Colmenas de la familia',
       respuesta: 'El mismo día',
@@ -580,19 +578,15 @@ export function todasLasPublicaciones() {
 }
 
 export function filtrarPublicaciones(lista, { q = '', categorias = [], zona = '', tipos = [], orden = 'recientes', soloDestacados = false }) {
-  const texto = q.trim().toLowerCase()
   const resultado = lista.filter((p) => {
     if (soloDestacados && !p.destacado) return false
     if (categorias.length && !categorias.includes(p.categoria)) return false
     if (zona === 'toda' && p.zona !== 'toda') return false
     if (zona && zona !== 'toda' && p.zona !== zona && p.zona !== 'toda') return false
     if (tipos.length && !tipos.includes(p.tipo)) return false
-    if (texto) {
-      const cat = categoriaPorId(p.categoria)?.nombre || ''
-      const zonaNombre = zonaPorId(p.zona)?.nombre || ''
-      const bolsa = `${p.nombre} ${p.resumen} ${p.descripcion} ${cat} ${zonaNombre} ${p.ubicacion} ${p.estado}`.toLowerCase()
-      if (!bolsa.includes(texto)) return false
-    }
+    const cat = categoriaPorId(p.categoria)?.nombre || ''
+    const zonaNombre = zonaPorId(p.zona)?.nombre || ''
+    if (!matchesQuery(q, p.nombre, p.resumen, p.descripcion, cat, zonaNombre, p.ubicacion, p.estado)) return false
     return true
   })
 
