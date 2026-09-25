@@ -27,6 +27,7 @@ html {
 
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-mano: "Caveat", cursive;
+  --font-script: "Great Vibes", "Caveat", cursive;
 
   --shadow-suave: 0 10px 30px -12px rgba(92, 52, 20, 0.25);
   --shadow-tarjeta: 0 6px 20px -8px rgba(92, 52, 20, 0.22);

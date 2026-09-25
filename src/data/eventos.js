@@ -1,4 +1,8 @@
 import xantoloAltar from '../assets/img/xantolo-altar.svg';
+import eventoDesfile from '../assets/img/xantolo/evento-desfile.webp';
+import eventoAltares from '../assets/img/xantolo/evento-altares.webp';
+import eventoMusica from '../assets/img/xantolo/evento-musica.webp';
+import eventoDanza from '../assets/img/xantolo/evento-danza.webp';
 import arco from '../assets/img/secciones/arco.svg';
 import jornada from '../assets/img/secciones/jornada.svg';
 import faena from '../assets/img/secciones/faena.svg';
@@ -238,6 +242,106 @@ export const eventos = [
       { label: 'Fecha', value: '19 de octubre de 2026, 17:00' },
       { label: 'Lugar', value: 'Cancha del Centro' },
       { label: 'Tipo', value: 'Comunidad' },
+    ],
+  },
+  {
+    id: 'desfile-xantolo',
+    title: 'Desfile tradicional del Xantolo',
+    summary: 'Comparsa, máscaras y flor recorren el centro. Dato de muestra para la agenda.',
+    categoryId: 'cultura',
+    category: 'Cultura',
+    badge: 'Cultura',
+    badgeClass: 'bg-[#C2255C]',
+    monthId: '2026-10',
+    date: '31 de oct. 2026',
+    dateTime: '2026-10-31',
+    time: '4:00 PM',
+    place: 'Centro de Chapulhuacanito',
+    image: eventoDesfile,
+    alt: 'Comparsa de Xantolo con máscaras, sombreros de cempasúchil y trajes bordados en un desfile nocturno',
+    body: [
+      'El desfile de ejemplo sale por la calle principal cuando baja la tarde. Van máscaras, listones y ramas de cempasúchil.',
+      'Es un dato de muestra para esta página, no un programa publicado por una autoridad. La hora y el recorrido pueden cambiar cuando la comunidad lo confirme.',
+    ],
+    facts: [
+      { label: 'Fecha', value: '31 de octubre de 2026, 4:00 PM' },
+      { label: 'Lugar', value: 'Centro de Chapulhuacanito' },
+      { label: 'Tipo', value: 'Cultura' },
+    ],
+  },
+  {
+    id: 'concurso-altares',
+    title: 'Concurso de altares comunitarios',
+    summary: 'Flor, pan y retrato en la plaza. Cada familia lleva lo que puede.',
+    categoryId: 'cultura',
+    category: 'Cultura',
+    badge: 'Cultura',
+    badgeClass: 'bg-[#C2255C]',
+    monthId: '2026-11',
+    date: '1 de nov. 2026',
+    dateTime: '2026-11-01',
+    time: '6:00 PM',
+    place: 'Plaza principal',
+    image: eventoAltares,
+    alt: 'Altar de Xantolo con cempasúchil, velas, pan y retratos frente a una iglesia',
+    body: [
+      'El concurso de ejemplo reúne altares de las casas y de los barrios en la plaza. No hay cuota: se lleva flor, una vela o el pan que alcance.',
+      'Es un dato de muestra. No es una convocatoria oficial.',
+    ],
+    facts: [
+      { label: 'Fecha', value: '1 de noviembre de 2026, 6:00 PM' },
+      { label: 'Lugar', value: 'Plaza principal' },
+      { label: 'Tipo', value: 'Cultura' },
+    ],
+  },
+  {
+    id: 'muestra-musica-huasteca',
+    title: 'Muestra de música de la Huasteca',
+    summary: 'Huapango en la plaza: violín, jarana y huapanguera.',
+    categoryId: 'cultura',
+    category: 'Cultura',
+    badge: 'Cultura',
+    badgeClass: 'bg-[#C2255C]',
+    monthId: '2026-11',
+    date: '1 de nov. 2026',
+    dateTime: '2026-11-01',
+    time: '7:00 PM',
+    place: 'Plaza principal',
+    image: eventoMusica,
+    alt: 'Músicos de huapango con violín y guitarra junto a una mujer de traje tradicional',
+    body: [
+      'La muestra de ejemplo abre el kiosco al trío y a quien quiera cantar una copla. Se escucha desde la banqueta.',
+      'Es un dato de muestra para la agenda, no un cartel oficial.',
+    ],
+    facts: [
+      { label: 'Fecha', value: '1 de noviembre de 2026, 7:00 PM' },
+      { label: 'Lugar', value: 'Plaza principal' },
+      { label: 'Tipo', value: 'Cultura' },
+    ],
+  },
+  {
+    id: 'danza-huehues',
+    title: 'Danza de los huehues',
+    summary: 'Máscaras de madera y el paso de los viejos, al caer la tarde.',
+    categoryId: 'cultura',
+    category: 'Cultura',
+    badge: 'Cultura',
+    badgeClass: 'bg-[#C2255C]',
+    monthId: '2026-11',
+    date: '2 de nov. 2026',
+    dateTime: '2026-11-02',
+    time: '5:00 PM',
+    place: 'Plaza principal',
+    image: eventoDanza,
+    alt: 'Danzantes con máscaras de huehue y trajes de colores entre flores de cempasúchil',
+    body: [
+      'La danza de ejemplo cierra el recorrido. Los huehues salen enmascarados y el piso de la plaza se llena de flor.',
+      'Es un dato de muestra. La comunidad confirma el horario cuando el ensayo está listo.',
+    ],
+    facts: [
+      { label: 'Fecha', value: '2 de noviembre de 2026, 5:00 PM' },
+      { label: 'Lugar', value: 'Plaza principal' },
+      { label: 'Tipo', value: 'Cultura' },
     ],
   },
 ];

@@ -169,6 +169,36 @@ export default function IconSprite() {
       <symbol id="i-telefono" viewBox="0 0 24 24">
         <path d="M8 3h3l1 4-2 1a12 12 0 0 0 6 6l1-2 4 1v3a2 2 0 0 1-2 2A16 16 0 0 1 6 5a2 2 0 0 1 2-2z" />
       </symbol>
+      <symbol id="i-compartir" viewBox="0 0 24 24">
+        <circle cx="6" cy="12" r="2.2" />
+        <circle cx="17" cy="6.5" r="2.2" />
+        <circle cx="17" cy="17.5" r="2.2" />
+        <path d="m8.1 11 6.7-3.2M8.1 13l6.7 3.2" />
+      </symbol>
+      <symbol id="i-vela" viewBox="0 0 24 24">
+        <path d="M12 3c.7 1.5.7 2.6 0 3.8C10.6 5.6 10.6 4.4 12 3z" />
+        <path d="M9 8.2h6V19H9z" />
+        <path d="M8 20.5h8" />
+      </symbol>
+      <symbol id="i-camara" viewBox="0 0 24 24">
+        <path d="M4 8h3.2L9 6h6l1.8 2H20a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+        <circle cx="12" cy="13.5" r="3" />
+      </symbol>
+      <symbol id="i-gente" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+        <circle cx="9.5" cy="7" r="3" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a3 3 0 0 1 0 5.75" />
+      </symbol>
+      <symbol id="i-pergamino" viewBox="0 0 24 24">
+        <path d="M8 4h9a2 2 0 0 1 2 2v13l-3.2-1.8L12.5 19l-3.3-1.8L6 19V6a2 2 0 0 1 2-2z" />
+        <path d="M9 8h6M9 12h6" />
+      </symbol>
+      <symbol id="i-mascara-trazo" viewBox="0 0 24 24">
+        <path d="M4.5 8.2c.8-3.6 14.2-3.6 15 0 .8 5.2-.2 8.8-3.4 11.2-1.5 1.1-2.8 1.6-4.1 1.6s-2.6-.5-4.1-1.6C4.7 17 3.7 13.4 4.5 8.2z" />
+        <path d="M8 11.2c.7.9 2 .9 2.8 0M13.2 11.2c.7.9 2 .9 2.8 0" />
+        <path d="M9.2 15.4c1.6.9 3.2.9 4.8 0" />
+      </symbol>
     </svg>
   );
 }
