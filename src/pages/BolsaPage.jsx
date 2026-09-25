@@ -131,7 +131,7 @@ export default function BolsaPage() {
   }
 
   function buscarEmpleo() {
-    actualizar({ tipo: 'empleo', destacados: '', cat: '', publicar: '' });
+    actualizar({ tipo: 'empleo', destacados: '', cat: '', q: '', publicar: '' });
     document.getElementById('resultados')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
