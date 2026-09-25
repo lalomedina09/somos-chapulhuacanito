@@ -95,6 +95,15 @@ export default function IconSprite() {
         <circle cx="7.4" cy="13" r="1.1" fill="#FFD43B" stroke="none" />
         <circle cx="16.6" cy="13" r="1.1" fill="#FFD43B" stroke="none" />
       </symbol>
+      <symbol id="i-cruz" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 8v8M8 12h8" />
+      </symbol>
+      <symbol id="i-escuela" viewBox="0 0 24 24">
+        <path d="M3 10 12 4l9 6" />
+        <path d="M5 10v8h14v-8" />
+        <path d="M10 18v-4h4v4" />
+      </symbol>
       <symbol id="i-pin" viewBox="0 0 24 24">
         <path fill="currentColor" stroke="none" d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
         <circle cx="12" cy="10" r="3.2" fill="#fff" stroke="none" />

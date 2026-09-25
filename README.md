@@ -37,3 +37,5 @@ El build de producción usa la base `/somos-chapulhuacanito/` para GitHub Pages.
 Las fichas de ejemplo viven en `/avisos/:id`, `/negocios/:id`, `/eventos/:id`, `/turismo/:id` y `/noticias/:id`. Cualquier otra dirección muestra la página 404.
 
 El texto de las secciones internas está en `src/data`. Es ficticio (barrios, negocios, horarios y folios de muestra). Los teléfonos usan 481 000 0000 y los correos, dominios `ejemplo`.
+
+Las ilustraciones nuevas están en `src/assets/img/secciones`. El ícono para compartir y los favicon viven en `public/` (`og.png`, `favicon.svg`, `apple-touch-icon.png`, `icons/` y `site.webmanifest`) y se enlazan con la base de Vite.

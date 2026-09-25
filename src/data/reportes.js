@@ -1,3 +1,16 @@
+import bache from '../assets/img/secciones/bache.svg';
+import fuga from '../assets/img/secciones/fuga.svg';
+import alumbrado from '../assets/img/secciones/alumbrado.svg';
+import basura from '../assets/img/secciones/basura.svg';
+
+export const reporteImagenes = {
+  bache,
+  agua: fuga,
+  luz: alumbrado,
+  basura,
+  otro: bache,
+};
+
 export const tiposReporte = [
   { id: 'bache', label: 'Bache o camino' },
   { id: 'agua', label: 'Agua o fuga' },
@@ -9,6 +22,8 @@ export const tiposReporte = [
 export const reportesIniciales = [
   {
     id: 'rp-1821',
+    image: bache,
+    alt: 'Ilustración de un bache en el camino',
     folio: 'RP-2026-1821',
     tipo: 'Bache o camino',
     titulo: 'Bache frente a la cancha',
@@ -19,6 +34,8 @@ export const reportesIniciales = [
   },
   {
     id: 'rp-1828',
+    image: fuga,
+    alt: 'Ilustración de una fuga de agua en una toma',
     folio: 'RP-2026-1828',
     tipo: 'Agua o fuga',
     titulo: 'Goteo en la toma de la esquina',
@@ -29,6 +46,8 @@ export const reportesIniciales = [
   },
   {
     id: 'rp-1790',
+    image: alumbrado,
+    alt: 'Ilustración de una luminaria frente a una casa',
     folio: 'RP-2026-1790',
     tipo: 'Alumbrado',
     titulo: 'Luminaria apagada del callejón',
@@ -39,6 +58,8 @@ export const reportesIniciales = [
   },
   {
     id: 'rp-1804',
+    image: basura,
+    alt: 'Ilustración de un contenedor y basura junto al camino',
     folio: 'RP-2026-1804',
     tipo: 'Basura',
     titulo: 'Basura acumulada junto al puente',

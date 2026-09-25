@@ -7,6 +7,7 @@ import FilterChips from '../components/ui/FilterChips';
 import PageHero from '../components/ui/PageHero';
 import PageSection from '../components/ui/PageSection';
 import SearchBar from '../components/ui/SearchBar';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import { atractivos, turismoCategories } from '../data/turismo';
 import usePageTitle from '../hooks/usePageTitle';
@@ -30,7 +31,7 @@ export default function TurismoPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro}>
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.turismo}>
         <SearchBar id="buscar-turismo" value={query} onChange={setQuery} placeholder="Busca cascada, río o comida" label="Buscar atractivos" />
       </PageHero>
       <PageSection>

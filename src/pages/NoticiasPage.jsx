@@ -9,6 +9,7 @@ import PageSection from '../components/ui/PageSection';
 import Photo from '../components/ui/Photo';
 import SearchBar from '../components/ui/SearchBar';
 import { noticiaCategories, noticias } from '../data/noticias';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 import { matchesQuery } from '../utils/text';
@@ -34,7 +35,7 @@ export default function NoticiasPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro}>
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.noticias}>
         <SearchBar id="buscar-noticias" value={query} onChange={setQuery} placeholder="Busca una nota" label="Buscar noticias" />
       </PageHero>
       <PageSection>

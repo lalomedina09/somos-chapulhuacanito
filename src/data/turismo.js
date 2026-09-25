@@ -1,7 +1,7 @@
 import cascada from '../assets/img/turismo-cascada.svg';
-import hero from '../assets/img/hero-paisaje.svg';
-import comunidad from '../assets/img/comunidad.svg';
-import negocios from '../assets/img/negocios.svg';
+import rio from '../assets/img/secciones/rio.svg';
+import mirador from '../assets/img/secciones/mirador.svg';
+import zacahuil from '../assets/img/secciones/zacahuil.svg';
 
 export const turismoCategories = [
   { id: 'todos', label: 'Todo' },
@@ -40,8 +40,8 @@ export const atractivos = [
     category: 'Ríos',
     badge: 'Ríos',
     badgeClass: 'bg-verde',
-    image: hero,
-    alt: 'Ilustración de un río entre cerros',
+    image: rio,
+    alt: 'Ilustración de un río entre palmas y cerros',
     body: [
       'El nombre es de ejemplo. En creciente el agua sube rápido: el prototipo pide no entrar si el color está chocolate.',
       'La posada del mismo nombre está en El Sabinal, no a la orilla.',
@@ -59,8 +59,8 @@ export const atractivos = [
     category: 'Miradores',
     badge: 'Miradores',
     badgeClass: 'bg-naranja',
-    image: comunidad,
-    alt: 'Ilustración de la comunidad entre cerros',
+    image: mirador,
+    alt: 'Ilustración de una banca mirador frente al valle',
     body: [
       'El mirador de ejemplo es la última curva antes de bajar a Arroyo Verde. No hay puesto de comida: eso está en el Centro.',
     ],
@@ -77,8 +77,8 @@ export const atractivos = [
     category: 'Gastronomía',
     badge: 'Gastronomía',
     badgeClass: 'bg-[#C2255C]',
-    image: negocios,
-    alt: 'Ilustración de un local de comida',
+    image: zacahuil,
+    alt: 'Ilustración de un zacahuil en hoja sobre una mesa',
     body: [
       'En el prototipo el zacahuil se pide en la cocina de doña Chela. La receta no está aquí: solo el modo de encargarlo.',
       'Los sábados de feria también hay bocoles y café de olla en la plaza, como dato de muestra.',

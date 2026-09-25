@@ -12,6 +12,7 @@ import PrimaryButton from '../components/ui/PrimaryButton';
 import SearchBar from '../components/ui/SearchBar';
 import { barrios } from '../data/barrios';
 import { negocioCategories, negocios } from '../data/negocios';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 import { matchesQuery } from '../utils/text';
@@ -70,7 +71,7 @@ export default function NegociosPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro}>
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.negocios}>
         <SearchBar id="buscar-negocios" value={query} onChange={setQuery} placeholder="Busca una cocina, tienda o taller" label="Buscar negocios" />
       </PageHero>
       <PageSection>

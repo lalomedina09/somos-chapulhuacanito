@@ -5,7 +5,8 @@ import PageHero from '../components/ui/PageHero';
 import PageSection from '../components/ui/PageSection';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import { barrios } from '../data/barrios';
-import { reportesIniciales, tiposReporte } from '../data/reportes';
+import { reporteImagenes, reportesIniciales, tiposReporte } from '../data/reportes';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 
@@ -71,6 +72,8 @@ export default function ReportarPage() {
     const tipo = tiposReporte.find((item) => item.id === form.tipo);
     const nuevo = {
       id: folio,
+      image: reporteImagenes[form.tipo] ?? reporteImagenes.otro,
+      alt: 'Ilustración del tipo de reporte',
       folio,
       tipo: tipo?.label ?? 'Otro',
       titulo: form.descripcion.trim().slice(0, 80),
@@ -85,7 +88,7 @@ export default function ReportarPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} />
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.reportar} />
       <PageSection>
         <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div className="rounded-2xl bg-white p-5 shadow-tarjeta sm:p-8">
@@ -153,6 +156,9 @@ export default function ReportarPage() {
             <ul className="mt-4 space-y-3">
               {reportes.map((reporte) => (
                 <li key={reporte.id} className="rounded-2xl bg-white p-4 shadow-tarjeta">
+                  <div className="flex gap-3">
+                    <img src={reporte.image} alt={reporte.alt} className="h-16 w-20 shrink-0 rounded-xl object-cover" loading="lazy" />
+                    <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <p className="text-xs font-semibold text-tinta/50">{reporte.folio}</p>
                     <Badge className={reporte.estadoClass}>{reporte.estado}</Badge>
@@ -162,6 +168,8 @@ export default function ReportarPage() {
                     {reporte.tipo} · {reporte.barrio}
                   </p>
                   <p className="mt-1 text-xs text-tinta/50">{reporte.fecha}</p>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>

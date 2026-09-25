@@ -1,7 +1,7 @@
 import camino from '../assets/img/camino.svg';
-import salud from '../assets/img/salud.svg';
-import comunidad from '../assets/img/comunidad.svg';
-import xantoloBanner from '../assets/img/xantolo-banner.svg';
+import tinaco from '../assets/img/secciones/tinaco-cancha.svg';
+import huerta from '../assets/img/secciones/huerta.svg';
+import arco from '../assets/img/secciones/arco.svg';
 
 export const noticiaCategories = [
   { id: 'todos', label: 'Todas' },
@@ -44,8 +44,8 @@ export const noticias = [
     badgeClass: 'bg-verde',
     date: '15 de oct. 2026',
     dateTime: '2026-10-15',
-    image: salud,
-    alt: 'Ilustración de un servicio comunitario',
+    image: tinaco,
+    alt: 'Ilustración de un tinaco junto a la cancha',
     body: [
       'Nota ligada al aviso de suspensión. El tinaco es de ejemplo y el horario también: 8:00 a 13:00.',
     ],
@@ -64,8 +64,8 @@ export const noticias = [
     badgeClass: 'bg-verde',
     date: '10 de oct. 2026',
     dateTime: '2026-10-10',
-    image: comunidad,
-    alt: 'Ilustración de la comunidad',
+    image: huerta,
+    alt: 'Ilustración de una huerta escolar junto a la primaria',
     body: [
       'La escuela del prototipo aparta un cuadro junto al cerco. Las familias llevan semilla; la delegación, la manguera.',
     ],
@@ -84,8 +84,8 @@ export const noticias = [
     badgeClass: 'bg-[#C2255C]',
     date: '12 de oct. 2026',
     dateTime: '2026-10-12',
-    image: xantoloBanner,
-    alt: 'Ilustración del arco de Xantolo',
+    image: arco,
+    alt: 'Ilustración de un arco de cempasúchil',
     body: [
       'Crónica corta de ejemplo. El arco se arma el 30 y la foto real todavía no está: hoy se ve la ilustración.',
     ],

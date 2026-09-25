@@ -1,14 +1,15 @@
 import salud from '../assets/img/salud.svg';
-import informado from '../assets/img/informado.svg';
-import comunidad from '../assets/img/comunidad.svg';
-import camino from '../assets/img/camino.svg';
+import tanque from '../assets/img/secciones/tanque.svg';
+import delegacion from '../assets/img/secciones/delegacion.svg';
+import escuela from '../assets/img/secciones/escuela.svg';
+import emergencias from '../assets/img/secciones/emergencias.svg';
 
 export const servicios = [
   {
     id: 'casa-salud',
     title: 'Casa de Salud',
     summary: 'Consultas generales, curaciones y el módulo de vacunación de los viernes.',
-    icon: 'i-engrane',
+    icon: 'i-cruz',
     image: salud,
     alt: 'Ilustración de una casa de salud rural',
     horario: 'Lun a vie, 8:00 a 15:00',
@@ -22,8 +23,8 @@ export const servicios = [
     title: 'Comité de agua',
     summary: 'Reportes de fugas, cortes y el padrón de tomas. Atienden en la caseta.',
     icon: 'i-gota',
-    image: camino,
-    alt: 'Ilustración de un camino entre cerros',
+    image: tanque,
+    alt: 'Ilustración de un tanque de agua elevado entre cerros',
     horario: 'Lun a sáb, 9:00 a 13:00',
     lugar: 'Caseta del tanque, camino al Sabinal',
     phone: '481 000 0000',
@@ -35,8 +36,8 @@ export const servicios = [
     title: 'Delegación',
     summary: 'Constancias de ejemplo, sellos y el libro donde se anotan las faenas.',
     icon: 'i-portapapeles',
-    image: informado,
-    alt: 'Ilustración de un tablero de avisos',
+    image: delegacion,
+    alt: 'Ilustración de la delegación con una bandera de ejemplo',
     horario: 'Lun a vie, 9:00 a 15:00',
     lugar: 'Plaza, Centro',
     phone: '481 000 0000',
@@ -47,9 +48,9 @@ export const servicios = [
     id: 'escuela',
     title: 'Escuela primaria Río Claro',
     summary: 'Turno matutino. Nombre inventado para el prototipo, no es un plantel real.',
-    icon: 'i-casa',
-    image: comunidad,
-    alt: 'Ilustración de casas de la comunidad',
+    icon: 'i-escuela',
+    image: escuela,
+    alt: 'Ilustración de una escuela con huerta y palma',
     horario: 'Lun a vie, 8:00 a 13:30',
     lugar: 'Entre el Centro y San José',
     phone: '481 000 0000',
@@ -61,8 +62,8 @@ export const servicios = [
     title: 'Emergencias',
     summary: 'En un caso real marca al 911. Aquí solo mostramos un contacto de ejemplo de la comunidad.',
     icon: 'i-megafono',
-    image: salud,
-    alt: 'Ilustración de la casa de salud',
+    image: emergencias,
+    alt: 'Ilustración de un módulo de emergencias con cruz y lámpara',
     horario: 'Enlace vecinal de ejemplo, 24 h',
     lugar: 'Red de barrio, no sustituye a protección civil',
     phone: '481 000 0000',

@@ -7,6 +7,7 @@ import FilterChips from '../components/ui/FilterChips';
 import PageHero from '../components/ui/PageHero';
 import PageSection from '../components/ui/PageSection';
 import { eventoCategories, eventoMonths, eventos } from '../data/eventos';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 
@@ -28,7 +29,7 @@ export default function EventosPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} />
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.eventos} />
       <PageSection>
         <div className="space-y-3">
           <FilterChips label="Mes" options={eventoMonths} value={month} onChange={setMonth} />

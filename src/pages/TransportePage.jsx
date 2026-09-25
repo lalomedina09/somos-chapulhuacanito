@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react';
 import { destinos, rutas } from '../data/rutas';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 import EmptyState from '../components/ui/EmptyState';
 import FilterChips from '../components/ui/FilterChips';
 import PageHero from '../components/ui/PageHero';
 import PageSection from '../components/ui/PageSection';
+import Photo from '../components/ui/Photo';
 
 export default function TransportePage() {
   const section = sections.transporte;
@@ -19,7 +21,7 @@ export default function TransportePage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={`${section.intro} Horarios y tarifas son de ejemplo.`} />
+      <PageHero kicker={section.kicker} title={section.title} intro={`${section.intro} Horarios y tarifas son de ejemplo.`} art={sectionArt.transporte} />
       <PageSection>
         <FilterChips label="Destino" options={destinos} value={destino} onChange={setDestino} />
         <p className="mt-4 text-sm text-tinta/60" aria-live="polite">
@@ -32,7 +34,9 @@ export default function TransportePage() {
         ) : (
           <ul className="mt-6 space-y-6">
             {visible.map((ruta) => (
-              <li key={ruta.id} className="rounded-2xl bg-white p-5 shadow-tarjeta sm:p-6">
+              <li key={ruta.id} className="overflow-hidden rounded-2xl bg-white shadow-tarjeta">
+                <Photo src={ruta.image} alt={ruta.alt} className="h-40 w-full object-cover" />
+                <div className="p-5 sm:p-6">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <h2 className="text-xl font-bold">{ruta.name}</h2>
@@ -79,6 +83,7 @@ export default function TransportePage() {
                     </li>
                   ))}
                 </ul>
+                </div>
               </li>
             ))}
           </ul>

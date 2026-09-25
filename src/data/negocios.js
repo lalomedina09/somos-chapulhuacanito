@@ -1,8 +1,9 @@
-import negociosImg from '../assets/img/negocios.svg';
-import comunidadImg from '../assets/img/comunidad.svg';
-import informadoImg from '../assets/img/informado.svg';
-import xantoloMascara from '../assets/img/xantolo-mascara.svg';
-import hero from '../assets/img/hero-paisaje.svg';
+import fonda from '../assets/img/secciones/fonda.svg';
+import abarrotes from '../assets/img/secciones/abarrotes.svg';
+import taller from '../assets/img/secciones/taller.svg';
+import artesanias from '../assets/img/secciones/artesanias.svg';
+import posada from '../assets/img/secciones/posada.svg';
+import tortilleria from '../assets/img/secciones/tortilleria.svg';
 
 export const negocioCategories = [
   { id: 'todos', label: 'Todos' },
@@ -24,8 +25,8 @@ export const negocios = [
     category: 'Comida',
     badge: 'Comida',
     badgeClass: 'bg-naranja',
-    image: negociosImg,
-    alt: 'Ilustración de un local de comida con mesa y anuncio',
+    image: fonda,
+    alt: 'Ilustración de una fonda con toldo naranja, cazuelas y mesa',
     barrio: 'Centro',
     horario: 'Lun a sáb, 8:00 a 16:00',
     whatsapp,
@@ -47,8 +48,8 @@ export const negocios = [
     category: 'Abarrotes',
     badge: 'Abarrotes',
     badgeClass: 'bg-verde',
-    image: comunidadImg,
-    alt: 'Ilustración de casas y un local de barrio',
+    image: abarrotes,
+    alt: 'Ilustración de un abarrotes con anaqueles de frascos y costales',
     barrio: 'San José',
     horario: 'Todos los días, 7:00 a 21:00',
     whatsapp,
@@ -70,8 +71,8 @@ export const negocios = [
     category: 'Servicios',
     badge: 'Servicios',
     badgeClass: 'bg-[#1C7ED6]',
-    image: informadoImg,
-    alt: 'Ilustración de una persona con un tablero de avisos comunitarios',
+    image: taller,
+    alt: 'Ilustración de un taller con herramientas y una bomba',
     barrio: 'La Loma',
     horario: 'Lun a vie, 9:00 a 18:00',
     whatsapp,
@@ -93,8 +94,8 @@ export const negocios = [
     category: 'Artesanías',
     badge: 'Artesanías',
     badgeClass: 'bg-[#C2255C]',
-    image: xantoloMascara,
-    alt: 'Ilustración de una máscara de Xantolo',
+    image: artesanias,
+    alt: 'Ilustración de máscaras, textiles y cempasúchil en un puesto',
     barrio: 'Arroyo Verde',
     horario: 'Mar a dom, 10:00 a 17:00',
     whatsapp,
@@ -116,8 +117,8 @@ export const negocios = [
     category: 'Hospedaje',
     badge: 'Hospedaje',
     badgeClass: 'bg-[#9C36B5]',
-    image: hero,
-    alt: 'Ilustración de un paisaje de la Huasteca con río y cerros',
+    image: posada,
+    alt: 'Ilustración de una posada con hamaca, palmas y techo de teja',
     barrio: 'El Sabinal',
     horario: 'Recepción 8:00 a 20:00',
     whatsapp,
@@ -139,8 +140,8 @@ export const negocios = [
     category: 'Comida',
     badge: 'Comida',
     badgeClass: 'bg-naranja',
-    image: negociosImg,
-    alt: 'Ilustración de un negocio local',
+    image: tortilleria,
+    alt: 'Ilustración de una tortillería con tortillas apiladas y un comal',
     barrio: 'Las Flores',
     horario: 'Lun a sáb 6:00 a 14:00; dom 6:00 a 12:00',
     whatsapp,

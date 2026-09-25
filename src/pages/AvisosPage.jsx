@@ -8,6 +8,7 @@ import PageHero from '../components/ui/PageHero';
 import PageSection from '../components/ui/PageSection';
 import SearchBar from '../components/ui/SearchBar';
 import { avisoCategories, avisos } from '../data/avisos';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 import { matchesQuery } from '../utils/text';
@@ -30,7 +31,7 @@ export default function AvisosPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro}>
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.avisos}>
         <SearchBar id="buscar-avisos" value={query} onChange={setQuery} placeholder="Busca por barrio o tema" label="Buscar avisos" />
       </PageHero>
       <PageSection>

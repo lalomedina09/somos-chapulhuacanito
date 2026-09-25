@@ -1,3 +1,8 @@
+import camioneta from '../assets/img/secciones/camioneta.svg';
+import colectivo from '../assets/img/secciones/colectivo.svg';
+import parada from '../assets/img/secciones/parada.svg';
+import caminoRural from '../assets/img/secciones/camino-rural.svg';
+
 export const destinos = [
   { id: 'todos', label: 'Todos los destinos' },
   { id: 'tamazunchale', label: 'Tamazunchale' },
@@ -11,6 +16,8 @@ export const destinos = [
 export const rutas = [
   {
     id: 'tamazunchale',
+    image: camioneta,
+    alt: 'Ilustración de una camioneta naranja de pasaje',
     name: 'Chapulhuacanito – Tamazunchale',
     destino: 'Tamazunchale',
     destinoId: 'tamazunchale',
@@ -26,6 +33,8 @@ export const rutas = [
   },
   {
     id: 'colectivo-loma',
+    image: colectivo,
+    alt: 'Ilustración de un colectivo verde de barrio',
     name: 'Colectivo Centro – La Loma – Arroyo Verde',
     destino: 'La Loma y Arroyo Verde',
     destinoId: 'la-loma',
@@ -41,6 +50,8 @@ export const rutas = [
   },
   {
     id: 'escolar',
+    image: parada,
+    alt: 'Ilustración de una parada con techo naranja',
     name: 'Ruta escolar Centro – San José',
     destino: 'San José',
     destinoId: 'san-jose',
@@ -54,6 +65,8 @@ export const rutas = [
   },
   {
     id: 'sabinal',
+    image: caminoRural,
+    alt: 'Ilustración de un camino rural entre cerros y palmas',
     name: 'Camioneta al Sabinal',
     destino: 'El Sabinal',
     destinoId: 'el-sabinal',

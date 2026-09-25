@@ -3,6 +3,7 @@ import Photo from '../components/ui/Photo';
 import PageHero from '../components/ui/PageHero';
 import PageSection from '../components/ui/PageSection';
 import { galeriaCultura, otrasTradiciones, xantoloDias } from '../data/cultura';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 
@@ -12,7 +13,7 @@ export default function CulturaPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} />
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.cultura} />
       <PageSection>
         <div className="rounded-2xl bg-white p-6 shadow-tarjeta sm:p-8">
           <p className="font-mano text-3xl font-bold text-naranja">Xantolo</p>

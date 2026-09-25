@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import { servicios } from '../data/servicios';
 import usePageTitle from '../hooks/usePageTitle';
@@ -13,7 +14,7 @@ export default function ServiciosPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={`${section.intro} Teléfonos y correos son de ejemplo.`} />
+      <PageHero kicker={section.kicker} title={section.title} intro={`${section.intro} Teléfonos y correos son de ejemplo.`} art={sectionArt.servicios} />
       <PageSection>
         <ul className="grid gap-4 lg:grid-cols-2">
           {servicios.map((item) => (

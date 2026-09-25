@@ -1,9 +1,12 @@
 import xantoloAltar from '../assets/img/xantolo-altar.svg';
-import salud from '../assets/img/salud.svg';
-import comunidad from '../assets/img/comunidad.svg';
-import xantoloMascara from '../assets/img/xantolo-mascara.svg';
-import xantoloBanner from '../assets/img/xantolo-banner.svg';
-import cempasuchil from '../assets/img/cempasuchil.svg';
+import arco from '../assets/img/secciones/arco.svg';
+import jornada from '../assets/img/secciones/jornada.svg';
+import faena from '../assets/img/secciones/faena.svg';
+import danza from '../assets/img/secciones/danza.svg';
+import despedida from '../assets/img/secciones/despedida.svg';
+import reunion from '../assets/img/secciones/reunion.svg';
+import tianguis from '../assets/img/secciones/tianguis.svg';
+import cancha from '../assets/img/secciones/cancha.svg';
 
 export const eventoMonths = [
   { id: 'todos', label: 'Todos los meses' },
@@ -32,8 +35,8 @@ export const eventos = [
     dateTime: '2026-10-17',
     time: '17:00',
     place: 'Plaza del Centro',
-    image: xantoloAltar,
-    alt: 'Ilustración de un altar de Xantolo con arco de cempasúchil',
+    image: arco,
+    alt: 'Ilustración de un arco de cempasúchil en preparación',
     body: [
       'La reunión de ejemplo junta a quien quiere ayudar con la flor, las velas y el recorrido del 31.',
       'No es un evento publicado por una autoridad. Sirve para enseñar la ficha de la agenda.',
@@ -57,8 +60,8 @@ export const eventos = [
     dateTime: '2026-10-16',
     time: '9:00',
     place: 'Casa de Salud',
-    image: salud,
-    alt: 'Ilustración de una casa de salud rural con carpa de jornada',
+    image: jornada,
+    alt: 'Ilustración de una carpa de jornada médica con una cruz',
     body: [
       'La jornada es un dato de muestra ligado a la tarjeta de la portada. Trae cartilla y una identificación de ejemplo.',
       'Quien no alcance cupo puede volver al módulo del viernes.',
@@ -82,8 +85,8 @@ export const eventos = [
     dateTime: '2026-10-18',
     time: '7:00',
     place: 'Entrada a El Sabinal',
-    image: comunidad,
-    alt: 'Ilustración de la comunidad',
+    image: faena,
+    alt: 'Ilustración de herramientas y un camino de faena',
     body: [
       'La faena de ejemplo pide una hora, no el día entero. Quien no pueda ir manda herramienta con un vecino.',
     ],
@@ -106,8 +109,8 @@ export const eventos = [
     dateTime: '2026-10-31',
     time: '16:00',
     place: 'Sale de la plaza',
-    image: xantoloMascara,
-    alt: 'Ilustración de una máscara de Xantolo',
+    image: danza,
+    alt: 'Ilustración de máscaras y trajes de fiesta entre papel picado',
     body: [
       'La comparsa de ejemplo sale cuando baja el sol. El arco de cempasúchil se queda en la plaza para quien quiera dejar una ofrenda.',
     ],
@@ -154,8 +157,8 @@ export const eventos = [
     dateTime: '2026-11-02',
     time: '18:00',
     place: 'Plaza del Centro',
-    image: cempasuchil,
-    alt: 'Ilustración de una flor de cempasúchil',
+    image: despedida,
+    alt: 'Ilustración de velas y cempasúchil al cierre de Xantolo',
     body: [
       'El cierre de ejemplo es breve. La flor que todavía sirve se reparte para los altares de las casas.',
     ],
@@ -178,14 +181,62 @@ export const eventos = [
     dateTime: '2026-11-08',
     time: '18:00',
     place: 'Delegación',
-    image: xantoloBanner,
-    alt: 'Ilustración del arco de Xantolo',
+    image: reunion,
+    alt: 'Ilustración de una reunión bajo los árboles',
     body: [
       'Asamblea de ejemplo para noviembre. El acta se lee en voz alta y se cuelga en la delegación.',
     ],
     facts: [
       { label: 'Fecha', value: '8 de noviembre de 2026, 18:00' },
       { label: 'Lugar', value: 'Delegación' },
+      { label: 'Tipo', value: 'Comunidad' },
+    ],
+  },
+  {
+    id: 'tianguis-domingo',
+    title: 'Tianguis del domingo',
+    summary: 'Puestos de fruta, pan y cempasúchil alrededor de la plaza. Dato de ejemplo.',
+    categoryId: 'comunidad',
+    category: 'Comunidad',
+    badge: 'Comunidad',
+    badgeClass: 'bg-verde',
+    monthId: '2026-10',
+    date: '25 de oct. 2026',
+    dateTime: '2026-10-25',
+    time: '8:00',
+    place: 'Plaza del Centro',
+    image: tianguis,
+    alt: 'Ilustración de puestos de tianguis con toldos de colores',
+    body: [
+      'El tianguis de ejemplo se arma temprano. No es un mercado real: sirve para mostrar la tarjeta en la agenda.',
+    ],
+    facts: [
+      { label: 'Fecha', value: '25 de octubre de 2026, 8:00' },
+      { label: 'Lugar', value: 'Plaza del Centro' },
+      { label: 'Tipo', value: 'Comunidad' },
+    ],
+  },
+  {
+    id: 'partido-cancha',
+    title: 'Partido en la cancha',
+    summary: 'Encuentro de ejemplo entre barrios, al atardecer, bajo el techo a medias.',
+    categoryId: 'comunidad',
+    category: 'Comunidad',
+    badge: 'Comunidad',
+    badgeClass: 'bg-verde',
+    monthId: '2026-10',
+    date: '19 de oct. 2026',
+    dateTime: '2026-10-19',
+    time: '17:00',
+    place: 'Cancha del Centro',
+    image: cancha,
+    alt: 'Ilustración de una cancha verde con un balón',
+    body: [
+      'El partido es ficticio. La cancha es la misma de la que habla la asamblea del techo.',
+    ],
+    facts: [
+      { label: 'Fecha', value: '19 de octubre de 2026, 17:00' },
+      { label: 'Lugar', value: 'Cancha del Centro' },
       { label: 'Tipo', value: 'Comunidad' },
     ],
   },

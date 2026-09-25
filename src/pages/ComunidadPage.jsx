@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { barrios } from '../data/barrios';
+import { sectionArt } from '../data/sectionArt';
 import { sections } from '../data/sections';
 import usePageTitle from '../hooks/usePageTitle';
 import PageHero from '../components/ui/PageHero';
 import PageSection from '../components/ui/PageSection';
+import Photo from '../components/ui/Photo';
 
 const valores = [
   { title: 'Raíz', text: 'El Xantolo, el huapango y la comida se cuentan en casa antes que en un folleto.' },
@@ -28,7 +30,7 @@ export default function ComunidadPage() {
 
   return (
     <>
-      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} />
+      <PageHero kicker={section.kicker} title={section.title} intro={section.intro} art={sectionArt.comunidad} />
       <PageSection>
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
           <article className="rounded-2xl bg-white p-6 shadow-tarjeta sm:p-8">
@@ -61,9 +63,14 @@ export default function ComunidadPage() {
         <h2 className="mt-12 text-2xl font-bold">Barrios y localidades</h2>
         <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {barrios.map((barrio) => (
-            <li key={barrio.id} className="rounded-2xl bg-white p-5 shadow-tarjeta">
+            <li key={barrio.id} className="overflow-hidden rounded-2xl bg-white shadow-tarjeta">
+              <div className="h-32">
+                <Photo src={barrio.image} alt={barrio.alt} />
+              </div>
+              <div className="p-5">
               <h3 className="text-lg font-bold">{barrio.name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-tinta/70">{barrio.summary}</p>
+              </div>
             </li>
           ))}
         </ul>
