@@ -1,0 +1,9 @@
+﻿*.zip
+*.png
+!assets/**/*.png
+!src/**/*.png
+!public/**/*.png
+Thumbs.db
+desktop.ini
+node_modules/
+dist/

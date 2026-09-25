@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 134 152" width="134" height="152"><defs>
+<linearGradient id="pinG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a2a"/><stop offset="1" stop-color="#d9480f"/></linearGradient>
+<linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1c9"/><stop offset="1" stop-color="#fffaf0"/></linearGradient>
+<clipPath id="sceneClip"><circle cx="65" cy="63" r="44"/></clipPath>
+</defs><g transform="translate(0,0)">
+<path d="M22,128 C6,124 0,112 4,100 C14,104 22,114 22,128Z" fill="#2f8a47"/>
+<path d="M26,132 C14,138 2,134 -2,126 C8,122 20,124 26,132Z" fill="#1f6b3a"/>
+<path d="M65,148 C50,127 9,102 9,63 A56,56 0 1 1 121,63 C121,102 80,127 65,148Z" fill="url(#pinG)"/>
+<circle cx="65" cy="63" r="47" fill="#fff"/>
+<g clip-path="url(#sceneClip)">
+<rect x="18" y="16" width="94" height="94" fill="url(#skyG)"/>
+<g stroke="#f59f00" stroke-width="3.2" stroke-linecap="round">
+<line x1="52" y1="22" x2="52" y2="14"/><line x1="36" y1="30" x2="31" y2="24"/><line x1="68" y1="30" x2="73" y2="24"/><line x1="29" y1="45" x2="22" y2="43"/><line x1="75" y1="45" x2="82" y2="43"/></g>
+<circle cx="52" cy="47" r="15" fill="#ffb020"/><circle cx="52" cy="47" r="10" fill="#ffc94d"/>
+<path d="M14,72 C30,58 46,60 60,66 C74,56 94,52 116,64 L116,112 L14,112Z" fill="#86c36f"/>
+<g fill="#fffaf0"><rect x="76" y="50" width="9" height="20"/><path d="M74.5,50 L80.5,41 L86.5,50Z" fill="#f26b1d"/><rect x="80" y="35" width="1.6" height="7" fill="#f26b1d"/><rect x="77.8" y="37.2" width="6" height="1.6" fill="#f26b1d"/>
+<rect x="84" y="58" width="16" height="13"/><path d="M83,58 L92,52 L101,58Z" fill="#f26b1d"/></g>
+<rect x="79" y="54" width="3" height="4" rx="1.5" fill="#c2502a"/><rect x="90" y="63" width="4" height="8" rx="2" fill="#8a4b2a"/>
+<path d="M14,84 C34,70 52,72 70,80 C86,72 102,70 116,76 L116,112 L14,112Z" fill="#3e9a4a"/>
+<path d="M14,96 C36,86 58,90 78,98 C94,92 106,90 116,92 L116,112 L14,112Z" fill="#1f6b3a"/>
+<path d="M48,112 C52,102 60,98 72,94 C80,91 88,90 96,86" stroke="#ffe8b0" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<circle cx="30" cy="80" r="5" fill="#2f7a3f"/><circle cx="36" cy="78" r="4" fill="#3e9a4a"/><circle cx="104" cy="82" r="5" fill="#2f7a3f"/>
+</g>
+<circle cx="65" cy="63" r="44" fill="none" stroke="#fff" stroke-width="1"/>
+</g></svg>
