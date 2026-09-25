@@ -33,26 +33,26 @@ export default function DetailPage({ item, backTo, backLabel, kicker, children }
       </PageHero>
       <PageSection>
         <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,0.8fr)]">
-          <article className="rounded-2xl bg-white p-5 shadow-tarjeta sm:p-8">
+          <article className="min-w-0 rounded-2xl bg-white p-5 shadow-tarjeta sm:p-8">
             {item.image ? (
               <div className="mb-6 overflow-hidden rounded-2xl">
                 <Photo src={item.image} alt={item.alt} className="h-56 w-full object-cover sm:h-72" />
               </div>
             ) : null}
-            <div className="space-y-4 text-base leading-relaxed text-tinta/80">
+            <div className="space-y-4 break-words text-base leading-relaxed text-tinta/80">
               {item.body?.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
             {children}
           </article>
-          <aside className="rounded-2xl bg-white p-5 shadow-tarjeta sm:p-6">
+          <aside className="min-w-0 rounded-2xl bg-white p-5 shadow-tarjeta sm:p-6">
             {item.badge ? <Badge className={item.badgeClass}>{item.badge}</Badge> : null}
             <dl className="mt-4 space-y-4">
               {item.facts?.map((fact) => (
                 <div key={fact.label}>
                   <dt className="text-xs font-semibold uppercase tracking-wide text-tinta/50">{fact.label}</dt>
-                  <dd className="mt-1 text-sm font-medium text-tinta">{fact.value}</dd>
+                  <dd className="mt-1 break-words text-sm font-medium text-tinta">{fact.value}</dd>
                 </div>
               ))}
             </dl>
