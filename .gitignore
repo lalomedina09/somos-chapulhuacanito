@@ -1,0 +1,5 @@
+﻿*.zip
+*.png
+!assets/**/*.png
+Thumbs.db
+desktop.ini
