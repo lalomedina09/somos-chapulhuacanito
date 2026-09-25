@@ -16,7 +16,7 @@ export default function XantoloBanner() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#2A0B20]/95 via-[#2A0B20]/70 to-transparent sm:via-[#2A0B20]/55" />
         <div className="flex min-h-[240px] flex-col justify-center px-6 py-10 sm:min-h-[260px] sm:px-10 lg:px-14">
           <p className="font-mano text-2xl font-bold text-[#FFC078]">Del 30 de octubre al 2 de noviembre</p>
-          <h2 id="titulo-xantolo" className="mt-1 text-3xl font-extrabold leading-tight text-white sm:text-5xl">
+          <h2 id="titulo-xantolo" className="mt-1 text-3xl font-extrabold leading-tight text-white sm:text-5xl sm:leading-none!">
             Xantolo <span className="block sm:inline">Chapulhuacanito</span>
           </h2>
           <p className="mt-2 text-lg text-white/90 sm:text-xl">Tradición que nos une</p>

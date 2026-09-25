@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="relative max-w-2xl">
           <h1
             id="titulo-hero"
-            className="texto-sombra text-[2.35rem] font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
+            className="texto-sombra text-[2.35rem] font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl sm:leading-none! lg:text-7xl"
           >
             Chapulhuacanito <span className="block">es su gente</span>
           </h1>
@@ -83,7 +83,7 @@ export default function Hero() {
         </div>
 
         <p
-          className="texto-sombra pointer-events-none absolute right-8 top-10 hidden -rotate-6 text-right font-mano text-4xl font-bold leading-[1.05] text-white lg:block lg:right-24 lg:top-14 lg:text-5xl"
+          className="texto-sombra pointer-events-none absolute right-8 top-10 hidden -rotate-6 text-right font-mano text-4xl font-bold leading-[1.05] text-white lg:block lg:right-24 lg:top-14 lg:text-5xl lg:leading-none!"
           aria-label="Nuestra gente, nuestra tierra, nuestro orgullo"
         >
           Nuestra gente
