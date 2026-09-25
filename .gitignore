@@ -1,5 +1,9 @@
 ﻿*.zip
 *.png
 !assets/**/*.png
+!public/assets/**/*.png
 Thumbs.db
 desktop.ini
+node_modules
+dist
+.DS_Store
