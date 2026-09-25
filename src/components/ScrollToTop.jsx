@@ -1,29 +1,42 @@
 import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+function jump(top) {
+  const root = document.documentElement;
+  root.style.scrollBehavior = 'auto';
+  // Fuerza el recálculo para que scroll-behavior: smooth del <html> no anime este salto.
+  void root.offsetHeight;
+  window.scrollTo(0, top);
+}
+
 function scrollForLocation(hash) {
   if (!hash) {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    jump(0);
     return;
   }
 
   const el = document.getElementById(hash.slice(1));
   if (!el) {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    jump(0);
     return;
   }
 
   const headerH = document.querySelector('header')?.offsetHeight ?? 0;
   const top = el.getBoundingClientRect().top + window.scrollY - headerH - 8;
-  window.scrollTo({ top: Math.max(0, top), left: 0, behavior: 'instant' });
+  jump(Math.max(0, top));
 }
 
 export default function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useLayoutEffect(() => {
+    if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual';
+    const root = document.documentElement;
     scrollForLocation(hash);
-    const frame = requestAnimationFrame(() => scrollForLocation(hash));
+    const frame = requestAnimationFrame(() => {
+      scrollForLocation(hash);
+      root.style.scrollBehavior = '';
+    });
     return () => cancelAnimationFrame(frame);
   }, [pathname, hash]);
 
